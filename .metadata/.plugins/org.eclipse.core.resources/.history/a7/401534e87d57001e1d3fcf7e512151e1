@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>페이지 이동하기</h1>
+	
+	<h2>상대 경로</h2>
+	
+	<a href="./ex11_link.html">이동하기</a>
+	<a href="ex11_link.html">이동하기</a>
+	
+</body>
+</html>
+
+<!-- 
+
+1. 상대 경로
+
+
+ -->
+
+

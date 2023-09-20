@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<font color="blue" size="5">홍길동</font>
+<!-- 	color : 속성 -->
+<!-- 	홍길동 : PCDATA -->
+<br><br>
+
+	<font> A &gt; B = true</font>
+	<br>
+	<font> A &lt; B = true</font>
+	
+	<font> A > B = true</font>
+	<br>
+	<font> A < B = true</font>
+	
+	
+</body>
+</html>

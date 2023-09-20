@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body background="https://image.dongascience.com/Photo/2016/09/14750507361195.jpg">
+	<h1>페이지 이동하기</h1>
+	
+	<h2>상대 경로</h2>
+	
+	<a href="./ex11_link.html">이동하기</a>
+	<a href="ex11_link.html">이동하기</a>
+	
+	
+	<h2>절대 경로</h2>
+	<a href="/client/html/ex11_link.html">이동하기</a>
+	
+	
+	<h2>로컬 경로</h2>
+	<a href="C:\class\code\client\ClientTest\src\main\webapp\html\ex11_link.html">이동하기</a>
+	
+	
+</body>
+</html>
+
+<!-- 
+
+1. 상대 경로
+
+
+ -->
+
+

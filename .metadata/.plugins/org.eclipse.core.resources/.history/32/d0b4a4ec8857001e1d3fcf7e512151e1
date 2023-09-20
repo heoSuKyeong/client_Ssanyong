@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>이미지</h1>
+	<img src="images/cat.jpg" alt="문자열">
+	
+	<hr>	
+	
+	<img src="images/cat.jpg" alt="문자열" width="1224" height="1280">
+	<img src="images/cat.jpg" alt="문자열" height="640">
+	
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>오늘의 할일</h1>
+	<!-- circle, disc -->
+	<ul type="disc">
+		<li>수업 복습하기</li>
+		<li>책상 정리하기</li>
+		<li>우산 말리기</li>
+
+	</ul>
+</body>
+</html>
+
+
+<!-- 
+List, 목록
+1. 순서가 있는 목록
+<ol> + <li>
+
+
+2. 순서가 없는 목록
+<ul> + <li>
+
+3. 용어 정의 목록
+<dl> + <dt> + <dd>
+
+
+ -->

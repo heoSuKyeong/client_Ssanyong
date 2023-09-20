@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1></h1>
+	<h2>물리적인 모양을 지정하는 태그</h2>
+	<b>볼드체</b><br>
+	<i>이태릭체</i><br>
+	<small>작은글자</small><br>
+	<big>큰글자</big><br>
+	<u>밑줄</u><br>
+	<strike>취소선</strike><br>
+	<tt>타자기 글자</tt>
+	
+	H<sub>2</sub>0<br><!-- 밑첨자-->
+	MC<sup>2</sup><br><!-- 윗첨자-->
+	
+	
+	
+	
+	
+	<h2>의미를 중시하는 태그</h2>
+	
+	
+	
+	
+</body>
+</html>
