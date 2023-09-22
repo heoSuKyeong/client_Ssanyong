@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 선택자 충돌 & 속성 충돌 */
+
+        /* .box {color: green;} */
+        /* #box1 {color: orange;} */
+        
+        /* div태그 && box1 아이디 && box 클래스 */
+        div#box1.box {color : red;}
+
+        /* 두 개 이상의 클래스를 가지는 태그만 적용 */
+        .box.one { color : blue;}
+
+        .tl {color: green;}
+
+        div > div> div> div> div> div> div> div> div> div {color:purple;}
+
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="box1" class="box one">상자</div>
+
+    <hr>
+
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div class="t1">상자</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
