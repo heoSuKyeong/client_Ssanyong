@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	
+	<!-- <a>태그는 인라인 태그이다. -->
+	<a href="https://naver.com">네이버</a>
+	<a href="https://google.com">구글</a>
+	<a href="https://daum.com" style="background-color: yellow;">다음</a>
+	문자열
+	
+	
+	<!-- <p>태그는 블럭 태그이다. -->
+	<p>문단1</p>
+	<p>문단2</p>
+	<p style="background-color: yellow;">문단3</p>
+	
+</body>
+</html>

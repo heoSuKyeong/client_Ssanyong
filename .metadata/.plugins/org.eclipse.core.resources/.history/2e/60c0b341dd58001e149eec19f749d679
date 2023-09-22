@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<progress></progress><br>
+	<progress value="0"></progress><br>
+	<progress value="0.2"></progress><br>
+	<progress value="0.5"></progress><br>
+	<progress value="0.7"></progress><br>
+	<progress value="1"></progress><br>
+	
+	<hr>
+	<progress value="50" max="100"></progress><br>
+
+	<hr>
+	
+	<meter value="0"></meter><br>
+	<meter value="0.7"></meter><br>
+	<meter value="1"></meter><br>
+	<meter value="-50" min=-100 max="100"></meter><br>
+	<br>
+	<meter value="-50" min=-100 max="100" high="80" low="20"></meter><br>	<!-- value < low -->
+	<meter value="50" min=-100 max="100" high="80" low="20"></meter><br>	<!-- low < value < high -->
+	<meter value="90" min=-100 max="100" high="80" low="20"></meter><br>	<!-- value > high -->
+
+</body>
+</html>

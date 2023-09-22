@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>q012</title>
+</head>
+<body>
+
+	<h1>교 육 훈 련 일 지</h1>
+	
+	<table>
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td>교육기관 : 서울 고용 노동부 / 쌍용 교육 센터</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>교육과정 : Java 기반 임베디드 플랫폼 연동 융합 개발자 양성 과정</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>교육일자 : 2023년       월       일      요일</td>
+					</tr>
+				
+				</table>
+			</td>
+			<td width="100">&nbsp;</td>
+			<td>
+				<table border="1" width="250" >
+					<tr>
+						<td align="center">담 당</td>
+						<td align="center">팀 장</td>
+						<td align="center">단 장</td>
+					</tr>
+					<tr>
+						<td height ="80">&nbsp;</td>
+						<td align="center"><b>전 결</b></td>
+						<td >&nbsp;</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+	<br>
+	
+	<table border="1" width="800">
+		<tr>
+			<td align="center">재적</td>
+			<td align="center">&nbsp;</td>
+			<td align="center">출석</td>
+			<td align="center">&nbsp;</td>
+			<td align="center">결석</td>
+			<td align="center">&nbsp;</td>
+			<td align="center">지각</td>
+			<td align="center">&nbsp;</td>
+			<td align="center">조회</td>
+			<td align="center">&nbsp;</td>
+			
+		</tr>
+	</table>
+	
+	
+
+</body>
+</html>

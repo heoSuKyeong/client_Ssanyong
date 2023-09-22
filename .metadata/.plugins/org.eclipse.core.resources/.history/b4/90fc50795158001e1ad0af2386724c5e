@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>데이터 입력</h1>
+
+	<form method="POST" action="ex18_server.jsp">
+		나이 : <input type="text" name="age">
+		<br>
+		<input type="submit" value="보내기">
+	
+	</form>
+	
+	
+	<hr>
+	
+	<h1>폼 컨트롤</h1>
+	
+	<form method="POST" action="ex18_server.jsp">
+		<!-- 
+		텍스트 박스(단일 라인):
+		<input type="text">
+		<br>
+		체크 박스 <input type="checkbox">
+		
+		텍스트 박스(단일 라인):
+		<input type="text" name="txt1" id="txt1" class="txt" size="30" maxlength="5">
+		
+		<hr>
+		
+		텍스트 박스(단일 라인):
+		<input type="text" name="txt1" id="txt1" class="txt" size="30" value="홍길동">
+		 -->
+		 
+		 
+		텍스트 박스(단일 라인):
+<!-- 		<input type="text" name="txt1" id="txt1" class="txt" size="30" value="hong" readonly> -->
+<!-- 		<input type="text" name="txt1" id="txt1" class="txt" size="30" value="hong" disabled> -->
+
+		<input type="text" name="txt1" id="txt1" class="txt" size="30" value="hong" accesskey="s" autofocus>
+		
+		<hr>
+		
+		
+		텍스트 박스(암호):
+		<input type="password">
+		
+		<hr>
+		
+		텍스트 박스(다중 라인):
+		<textarea>
+초기값
+1
+2</textarea>
+		
+		<hr>
+		
+		체크박스:
+		<input type="checkbox">
+		
+		<hr>
+		
+		<h3>취미 선택</h3>
+		<input type="checkbox" id="cd1" checked><label for="cd1">독서</label>	<!-- 방법1 -->
+		<input type="checkbox" id="cd2"><label for="cd2">달리기</label>
+		<label><input type="checkbox">영화보기</label>	<!-- 방법2(*)
+		 -->
+		
+		
+		<hr>
+		
+		<h3>라디오버튼</h3>
+		<label><input type="radio" name="rbGender">남자</label>
+		<label><input type="radio" name="rbGender">여자</label>
+		<label><input type="radio" name="rbGender" checked>선택안함</label>
+		
+		
+		<hr>
+		
+		셀렉트 박스:
+		<select>
+			<option>강아지</option>
+			<option>고양이</option>
+			<option>병아리</option>
+			
+		</select>
+		
+		<br>
+		
+		셀렉트 박스:
+		<select size="5" multiple>
+			<option>강아지</option>
+			<option>고양이</option>
+			<option>병아리</option>
+			
+		</select>
+		
+		
+		<hr>
+		
+		셀렉트 박스:
+		<select>
+			<optgroup label="자바">
+				<option>클래스</option>
+				<option>메소드</option>
+				<option>배열</option>
+			</optgroup>
+			<optgroup label="오라클">
+					<option>테이블</option>
+					<option>서브쿼리</option>
+					<option>조인</option>
+					<option>프로시저</option>
+			</optgroup>
+			<optgroup label="HTML">
+				<option>태그</option>
+				<option>엔티티</option>
+				<option>PCDATA</option>
+			</optgroup>
+			
+		</select>
+		
+		<hr>
+		
+		파일선택:
+		<input type="file">
+		
+		<hr>
+		
+		히든 태그:
+		<input type="hidden" name="txtname" value="홍길동">
+		
+		<hr>
+		
+		전송버튼: <input type="submit" value="전송하기">
+		
+		<br><br>
+		
+		취소버튼: <input type="reset" value="초기화">
+		
+		<hr>
+		<input type="submit" value="보내기">
+	</form>
+	
+
+</body>
+</html>

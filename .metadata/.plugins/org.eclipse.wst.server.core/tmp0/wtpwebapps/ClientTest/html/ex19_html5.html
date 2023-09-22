@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>HTML5</h1>
+
+	<form method="POST" action="ex18_server.jsp">
+		<input type="submit" value="전송하기">
+		
+		<hr>
+		
+		<input type="text" placeholder="이름을 입력하시오.">
+		<br>
+		<input type="password" placeholder="암호를 입력하시오.">
+
+		<!-- 
+		<h3>로그인(필수입력)</h3>
+		아이디: <input type="text" placeholder="이름을 입력하시오." required><br>
+		암호: <input type="password" placeholder="암호를 입력하시오." required><br>
+		<input type="submit" value="로그인">
+		 -->
+		<hr>
+		
+		이메일: <input type="email">
+		
+		<hr>
+		URL : <input type="url">
+		
+		<hr>
+		나이: <input type="number" min="19" max="80" step="10">
+		
+		
+		<hr>
+		범위: <input type="range" onchange="document.getElementById('txt1').value=this.value;" min="10" max="120" step="10">
+		<br>
+		<input type="text" id="txt1" size="10">
+		
+		<hr>
+		
+		색상:<input type="color" onchange="document.body.bgColor=this.value;">
+		<br>
+		
+		<hr>
+		날짜: <input type="date">
+		<br>
+		월: <input type="month">
+		<br>
+		주: <input type="week">
+		<br>
+		시간: <input type="time">
+		<br>
+		날짜 시간: <input type="datetime-local">
+		
+	</form> 
+	
+
+</body>
+</html>

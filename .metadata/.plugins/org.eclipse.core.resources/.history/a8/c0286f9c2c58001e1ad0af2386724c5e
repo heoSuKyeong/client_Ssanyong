@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>q012</title>
+</head>
+<body>
+
+	<p1>교 육 훈 련 일 지</p1>
+	
+	<table>
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td>교육기관 : 서울 고용 노동부 / 쌍용 교육 센터</td>
+					</tr>
+					<tr>
+						<td>교육기관 : 서울 고용 노동부 / 쌍용 교육 센터</td>
+					</tr>
+					<tr>
+						<td>교육기관 : 서울 고용 노동부 / 쌍용 교육 센터</td>
+					</tr>
+				
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td align="center">담 당</td>
+						<td align="center">담 당</td>
+						<td align="center">담 당</td>
+					</tr>
+					<tr>
+						<td>&npsb;</td>
+						<td><b>전결</b></td>
+						<td>&npsb;</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>원본 테이블</h1>
+	
+	<table border width="200" height="200">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+	</table>
+
+
+	<h1>가로 셀병합 테이블</h1>
+	<!-- 왼쪽 셀을 기준으로 병합한다.
+	각 <tr>내의 <td>개수는 동일해야 한다.
+	 -->
+	<table border width="200" height="200">
+		<tr>
+			<!--  colspan="1" 기본값 -->
+			<td colspan="2">1</td>
+			<td>2</td> 
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+	</table>
+	
+colspan 설정 후 지우기
+	<h1>세로 셀병합 테이블</h1>
+	
+	<table border width="200" height="200">
+		<tr>
+			<td rowspan="2">1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+<!-- 			<td>3</td> -->
+			<td>4</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+테이블 작업
+1. 기본 작업(table, tr, td)
+2. 데이터 작성
+3. 테이블 크기 조절(전체 너비 조절 후 열 너비 조절)
+- 
+- 높이는 데이터가 추가, 삭제 될때마다 변경해야하기 때문에 대부분 표의 높이는 조절하지 않는다.
+
+	 -->
+	
+	<h1>주소록</h1>
+
+	<table border="1" width="400">
+		<!-- 테이블 헤더 -->
+		<tr bgcolor="#DDDDDD">
+			<td width="60">번호</td>
+			<td width="80">이름</td>
+			<td width="60">나이</td>
+			<td width="70">성별</td>
+			<td width="330">주소</td>
+		</tr>
+		
+		<!-- 테이블 본문(데이터) -->
+		<!-- 기본적으로 너비 오토 설정이 되어 있어 자동 계산된다.  -->
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>30</td>
+			<td>남자</td>
+			<td>서울시 강남구 역삼동 서울숲샵아파트 101동</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>이순신</td>
+			<td>37</td>
+			<td>남자</td>
+			<td>인천시</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>유관순</td>
+			<td>16</td>
+			<td>여자</td>
+			<td>천안시</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>홍길동</td>
+			<td>30</td>
+			<td>남자</td>
+			<td>서울시</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>이순신</td>
+			<td>37</td>
+			<td>남자</td>
+			<td>인천시</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>유관순</td>
+			<td>16</td>
+			<td>여자</td>
+			<td>천안시</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>홍길동</td>
+			<td>30</td>
+			<td>남자</td>
+			<td>서울시</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>이순신</td>
+			<td>37</td>
+			<td>남자</td>
+			<td>인천시</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>유관순</td>
+			<td>16</td>
+			<td>여자</td>
+			<td>천안시</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>홍길동</td>
+			<td>30</td>
+			<td>남자</td>
+			<td>서울시</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>이순신</td>
+			<td>37</td>
+			<td>남자</td>
+			<td>인천시</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>유관순</td>
+			<td>16</td>
+			<td>여자</td>
+			<td>천안시</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>홍길동</td>
+			<td>30</td>
+			<td>남자</td>
+			<td>서울시</td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>이순신</td>
+			<td>37</td>
+			<td>남자</td>
+			<td>인천시</td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>유관순</td>
+			<td>16</td>
+			<td>여자</td>
+			<td>천안시</td>
+		</tr>
+		
+	</table>
+
+
+</body>
+</html>

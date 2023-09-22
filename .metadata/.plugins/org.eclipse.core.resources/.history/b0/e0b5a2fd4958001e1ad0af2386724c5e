@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>데이터 입력</h1>
+
+	<form method="POST" action="ex18_server.jsp">
+		나이 : <input type="text" name="age">
+		<br>
+		<input type="submit" value="보내기">
+	
+	</form>
+	
+	
+	<hr>
+	
+	<h1>폼 컨트롤</h1>
+	
+	<form method="POST" action="ex18_server.jsp">
+		<!-- 
+		텍스트 박스(단일 라인):
+		<input type="text">
+		<br>
+		체크 박스 <input type="checkbox">
+		
+		텍스트 박스(단일 라인):
+		<input type="text" name="txt1" id="txt1" class="txt" size="30" maxlength="5">
+		
+		<hr>
+		
+		텍스트 박스(단일 라인):
+		<input type="text" name="txt1" id="txt1" class="txt" size="30" value="홍길동">
+		 -->
+		 
+		 
+		텍스트 박스(단일 라인):
+<!-- 		<input type="text" name="txt1" id="txt1" class="txt" size="30" value="hong" readonly> -->
+<!-- 		<input type="text" name="txt1" id="txt1" class="txt" size="30" value="hong" disabled> -->
+
+		<input type="text" name="txt1" id="txt1" class="txt" size="30" value="hong" accesskey="s" autofocus>
+		
+		<hr>
+		
+		
+		텍스트 박스(암호):
+		<input type="password">
+		
+		<hr>
+		
+		텍스트 박스(다중 라인):
+		<textare>초기값</textare>
+		
+		<hr>
+		<input type="submit" value="보내기">
+	</form>
+	
+
+</body>
+</html>

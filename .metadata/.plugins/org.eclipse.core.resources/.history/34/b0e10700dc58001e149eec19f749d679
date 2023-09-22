@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<progress value="0"></progress><br>
+	<progress value="0.2"></progress><br>
+	<progress value="0.5"></progress><br>
+	<progress value="0.7"></progress><br>
+	<progress value="1"></progress><br>
+
+
+
+</body>
+</html>

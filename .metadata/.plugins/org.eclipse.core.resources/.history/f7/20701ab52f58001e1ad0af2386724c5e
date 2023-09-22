@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>q012</title>
+</head>
+<body>
+
+	<h1>교 육 훈 련 일 지</h1>
+	
+	<table>
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td>교육기관 : 서울 고용 노동부 / 쌍용 교육 센터</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>교육과정 : Java 기반 임베디드 플랫폼 연동 융합 개발자 양성 과정</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>교육일자 : 2023년       월       일      요일</td>
+					</tr>
+				
+				</table>
+			</td>
+			<td width="50">&nbsp;</td>
+			<td>
+				<table border="1" width="250" >
+					<tr>
+						<td align="center">담 당</td>
+						<td align="center">팀 장</td>
+						<td align="center">단 장</td>
+					</tr>
+					<tr>
+						<td height ="80">&nbsp;</td>
+						<td align="center"><b>전 결</b></td>
+						<td >&nbsp;</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+	<br>
+	
+	<table border="1" width="800">
+		<tr>
+			<td align="center" width="80">재적</td>
+			<td align="center" width="80">&nbsp;</td>
+			<td align="center" width="80">출석</td>
+			<td align="center" width="80">&nbsp;</td>
+			<td align="center" width="80">결석</td>
+			<td align="center" width="80">&nbsp;</td>
+			<td align="center" width="80">지각</td>
+			<td align="center" width="80">&nbsp;</td>
+			<td align="center" width="80">조회</td>
+			<td align="center" width="80">&nbsp;</td>
+			
+		</tr>
+	</table>
+	
+	<br>
+	14*10
+	<table border="1" width="800">
+		<tr>
+			<td align="center" colspan="10">교 육 훈 련 사 항</td>
+		</tr>
+		<tr>
+			<td align="center">교시</td>
+			<td align="center" colspan="2">교육과정</td>
+			<td align="center">담당교수</td>
+			<td align="center" colspan="6" width="600">교육내용</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td align="center" colspan="2">&nbsp;</td>
+			<td align="center">&nbsp;</td>
+			<td align="center" colspan="6">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td align="center" colspan="2">&nbsp;</td>
+			<td align="center">&nbsp;</td>
+			<td align="center" colspan="6">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td align="center" colspan="2">&nbsp;</td>
+			<td align="center">&nbsp;</td>
+			<td align="center" colspan="6">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center">4</td>
+			<td align="center" colspan="2">&nbsp;</td>
+			<td align="center">&nbsp;</td>
+			<td align="center" colspan="6">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center">5</td>
+			<td align="center" colspan="2">&nbsp;</td>
+			<td align="center">&nbsp;</td>
+			<td align="center" colspan="6">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center">6</td>
+			<td align="center" colspan="2">&nbsp;</td>
+			<td align="center">&nbsp;</td>
+			<td align="center" colspan="6">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center">7</td>
+			<td align="center" colspan="2">&nbsp;</td>
+			<td align="center">&nbsp;</td>
+			<td align="center" colspan="6">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center">8</td>
+			<td align="center" colspan="2">&nbsp;</td>
+			<td align="center">&nbsp;</td>
+			<td align="center" colspan="6">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center" rowspan="2">교육기간</td>
+			<td align="center">일계</td>
+			<td align="center">이론</td>
+			<td align="center">&nbsp;</td>
+			<td align="center">실기</td>
+			<td align="center">&nbsp;</td>
+			<td align="center">기타</td>
+			<td align="center">&nbsp;</td>
+			<td align="center">계</td>
+			<td align="center">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center">일계</td>
+			<td align="center">이론</td>
+			<td align="center">&nbsp;</td>
+			<td align="center">실기</td>
+			<td align="center">&nbsp;</td>
+			<td align="center">기타</td>
+			<td align="center">&nbsp;</td>
+			<td align="center">계</td>
+			<td align="center">&nbsp;</td>
+		</tr>
+	</table>
+	
+
+</body>
+</html>
