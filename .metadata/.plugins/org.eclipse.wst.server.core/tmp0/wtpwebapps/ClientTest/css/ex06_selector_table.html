@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* td { color: blue;} */
+        /* table > tr > td {color:blue;} 적용되지않음 */
+        /* table > tbody> tr > td {color:blue;} */
+        /* table  td {color:blue;} */
+
+        #tbl1 td {color:blue;}
+
+        .tbl2 td {color:red;}
+
+
+    </style>
+
+
+</head>
+<body>
+    
+    <h1>테이블</h1>    
+
+    <table border width="500" id="tbl1">
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+
+        </tr>
+
+
+    </table>
+
+    <hr>
+    <h1>원형 테이블 구조</h1>
+    <table border class="tbl2">
+        <thead>
+            <tr>
+                <th>컬럼명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>데이터</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>바닥글</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+</body>
+</html>

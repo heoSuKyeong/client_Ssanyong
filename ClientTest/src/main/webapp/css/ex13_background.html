@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #search {
+            background-image: url(../asset/images/hangame.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+
+
+        }
+
+        #search:focus {
+            /* url() > 빈칸으로 두면 이미지가 사라진다 */
+            background-image: url();
+        }
+
+        #btn {
+            background-image: url(../asset/images/bullet04.png);
+            background-repeat: no-repeat;
+            background-position: 5px center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>네이버</h1>
+
+    <div>
+        <input type="text" id="search">
+        <!-- 이미지가 들어간 버튼 1-->
+        <input type="button" value="   검색하기" id="btn">
+
+        <!-- 이미지가 들어간 버튼 2-->
+        <button>
+            <img src="../asset/images/bullet01.png">
+            검색하기
+        </button>
+
+    </div>
+
+    <!-- <img src="../asset/images/hangame.png" -->
+
+</body>
+</html>

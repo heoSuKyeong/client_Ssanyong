@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>태그 선택자</h1>
+
+    <a href="url">text</a>
+
+    <img src="" alt="">
+
+    ID 선택자
+    div#box1 {}
+    <div></div>
+    <div id="box1"></div>
+
+    <div id="test"></div>
+
+
+
+    <h1>클래스 선택자</h1>
+
+    
+    img.cat 
+    <img src="" alt="" class="cat">
+
+
+    div#box1.box 
+    <div id="box1" class="box">박스</div>
+
+    div.one.two.three 
+    <div class="one two three">박스</div>
+
+    div#box1.one.two.three 
+    <div id="box1" class="one two three">박스</div>
+
+
+
+    <h1>속성 선택자</h1>
+
+    div[title] {}
+    <div title=""></div>
+
+    div[title]
+    <div title=""></div>
+
+    div[title=상자]
+    <div title="상자"></div>
+
+    img[width=100 height=200] 
+    <img src="" alt="" width="100" height="200"> 
+
+
+    img#dog1.dog[width=200 height] 
+    <img src="" alt="" id="dog1" class="dog" width="200" height=""> 
+
+
+    <h1>PCDATA(Emment 전용)</h1>
+    div {구현부}
+
+    div{상자}
+    <div>상자</div>
+
+
+    div#box1.box[title=상자]{상자입니다.}
+    <div id="box1" class="box" title="상자">상자입니다.</div>
+
+    div*5
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+
+    div.item[title]{아이템}*5 
+    <div class="item" title="">아이템</div>
+    <div class="item" title="">아이템</div>
+    <div class="item" title="">아이템</div>
+    <div class="item" title="">아이템</div>
+    <div class="item" title="">아이템</div>
+    
+
+    div#box1{상자}*5
+    <div id="box1">상자</div>
+    <div id="box1">상자</div>
+    <div id="box1">상자</div>
+    <div id="box1">상자</div>
+    <div id="box1">상자</div>
+
+    div#box${상자}*5
+    <div id="box1">상자</div>
+    <div id="box2">상자</div>
+    <div id="box3">상자</div>
+    <div id="box4">상자</div>
+    <div id="box5">상자</div>
+
+    div#box$${상자}*5
+    <div id="box01">상자</div>
+    <div id="box02">상자</div>
+    <div id="box03">상자</div>
+    <div id="box04">상자</div>
+    <div id="box05">상자</div>
+
+
+    <h1>형제 선택자</h1>
+
+    a+b
+    a~b
+
+
+    div+p
+    <div></div>
+    <p></p>
+
+    div~p
+    <!-- 둘 사이에 어떤 태그가 있는지 모르기에 지원하지 않는다. -->
+
+    <div></div>
+    <p></p>
+    <span></span>
+
+    (h1+p)*3
+    <h1></h1>
+    <p></p>
+    <h1></h1>
+    <p></p>
+    <h1></h1>
+    <p></p>
+
+    h1#title1.title{제목입니다.}+p.content{설명입니다.}*3
+    <h1 id="title1" class="title">제목입니다.</h1>
+    <p class="content">설명입니다.</p>
+    <p class="content">설명입니다.</p>
+    <p class="content">설명입니다.</p>
+
+
+    cat01.jpg ~ cat06.jpg
+
+    <img src="imgaes/cat01.jpg" alt="고양이" title="고양이1" width="250"><br>
+
+    
+    (img[src=images/cat$$.jpg alt=고양이$ title=고양이$ width=250]+br)*6
+    <img src="images/cat01.jpg" alt="고양이1" title="고양이1" width="250"><br>
+    <img src="images/cat02.jpg" alt="고양이2" title="고양이2" width="250"><br>
+    <img src="images/cat03.jpg" alt="고양이3" title="고양이3" width="250"><br>
+    <img src="images/cat04.jpg" alt="고양이4" title="고양이4" width="250"><br>
+    <img src="images/cat05.jpg" alt="고양이5" title="고양이5" width="250"><br>
+    <img src="images/cat06.jpg" alt="고양이6" title="고양이6" width="250"><br>
+
+
+    <h1>자식 선택자</h1>
+    a>b
+    a b
+
+    div>a
+    <div><a href=""></a></div>
+
+
+    ul#list>li.item*5
+    <ul id="list">
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+    </ul>
+
+    table>tr>td
+    3행 3열 테이블
+    table#tbl1>tr*3>td.cell${데이터$}*3
+    <table id="tbl1">
+        <tr>
+            <td class="cell1">데이터1</td>
+            <td class="cell2">데이터2</td>
+            <td class="cell3">데이터3</td>
+        </tr>
+        <tr>
+            <td class="cell1">데이터1</td>
+            <td class="cell2">데이터2</td>
+            <td class="cell3">데이터3</td>
+        </tr>
+        <tr>
+            <td class="cell1">데이터1</td>
+            <td class="cell2">데이터2</td>
+            <td class="cell3">데이터3</td>
+        </tr>
+    </table>
+    
+
+    <h1>제목</h1>
+
+    lorem숫자
+
+    lorem5
+    Lorem ipsum dolor sit amet.
+
+    lorem10
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, commodi.
+
+    h1>lorem5
+    <h1>Lorem ipsum dolor sit amet.</h1>
+
+    (h1>lorem8)+(p>lorem50)
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque laudantium quidem doloribus in accusamus fuga numquam tempora harum, dolorum, minus error animi non? Beatae temporibus consequatur tenetur eius rem totam voluptas, quod ad maiores doloremque illo fuga delectus accusamus ea, minus itaque omnis voluptatum! Voluptatibus aliquid praesentium sint obcaecati amet.</p>
+    <p>Itaque ad dicta cumque similique saepe suscipit ab temporibus, minima, commodi rerum sint repellat voluptates perferendis sequi aliquid. Aperiam dolore a ea veniam numquam laudantium rem autem maxime et labore, deserunt voluptate consequuntur quae maiores natus adipisci saepe deleniti voluptatem ad, corporis quam, eveniet porro! Quod culpa possimus quidem nam?</p>
+
+
+</body>
+</html>

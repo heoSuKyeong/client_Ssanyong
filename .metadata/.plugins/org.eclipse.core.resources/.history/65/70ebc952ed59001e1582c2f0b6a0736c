@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<form method="POST" action="ex18_server.jsp">
+		
+		텍스트 박스(다중 라인):
+		<textarea>
+초기값
+1
+2</textarea>
+		<hr>
+		
+		셀렉트 박스:
+		<select>
+			<optgroup label="자바">
+				<option>클래스</option>
+				<option>메소드</option>
+				<option>배열</option>
+			</optgroup>
+			<optgroup label="오라클">
+					<option>테이블</option>
+					<option>서브쿼리</option>
+					<option>조인</option>
+					<option>프로시저</option>
+			</optgroup>
+			<optgroup label="HTML">
+				<option>태그</option>
+				<option>엔티티</option>
+				<option>PCDATA</option>
+			</optgroup>
+			
+		</select>
+	
+	
+	</form>
+</body>
+</html>

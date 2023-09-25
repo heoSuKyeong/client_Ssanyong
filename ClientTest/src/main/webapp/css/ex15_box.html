@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box1 {
+            border-color: black;    /*선 색상*/
+            border-width: 5px;      /*선 두께*/
+            border-style: solid;    /*선 종류*/
+            
+            /* 한줄로 작성이 가능하다(순서 상관 없음) */
+            /* border : 5px solid black; */
+        }
+
+        #box2 {
+            border-top: 5px solid black;
+            border-right: 5px solid blue;
+            border-bottom: 5px solid yellow;
+            border-left: 5px solid red;
+        }
+
+        #box3 {
+             border: 5px solid black;
+
+            /*
+            border-top-color : red;
+            border-right-color: blue;
+            border-bottom-color: yellow;
+            border-left-color: orange;
+            */
+            
+            /* 12시를 기준으로 시계 방향으로 적용 */
+            border-color: red blue yellow orange;
+        }
+        
+        .txt {
+            background-color: yellow;
+            border: 1px solid #777;
+            border-radius: 2px;
+            outline: none;
+        }
+
+        h1 {
+            border-left: 10px solid #CCC;
+            border-right: 10px solid #CCC;
+            width: 160px;
+            text-align: center;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    
+    <h1>박스모델</h1>
+    <div id="box1" class="box">상자1</div>
+    <br>
+    <div id="box2" class="box">상자2</div>
+    <br>
+    <div id="box3" class="box">상자3</div>
+    
+    <br>
+
+    <input id="txt1" class="txt">
+    <input id="txt2" class="txt">
+    <input id="txt3" class="txt">
+    <input >
+    
+</body>
+</html>
