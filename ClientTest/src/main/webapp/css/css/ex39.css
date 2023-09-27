@@ -1,0 +1,18 @@
+#box {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    margin:  50px;
+
+    background-image: url(../../asset/images/cat05.jpg);
+
+    /* 크기 종횡비 유지하면서 조절 */
+    /* background-size: 400px auto; 장축을 맞춰 이미지 위 아래가 빈 공간이 생긴다*/  
+     /*background-size: auto 400px; 단축을 맞춰 잘리는 부분이 생긴다. */
+
+    /* background-size: contain; */
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+}

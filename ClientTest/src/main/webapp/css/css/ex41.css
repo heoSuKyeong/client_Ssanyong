@@ -1,0 +1,109 @@
+/*
+#box1 {
+    color: blue;
+}
+
+.txt {
+    color: gold;
+}
+p {
+    단 수
+    column-count: 3;
+    단과 단사이의 간격
+    column-gap: 100px;
+    단 내의 양쪽정렬
+    text-align: justify;
+    구분선
+    column-rule: 1px dashed grey;
+}
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #e5e8e9;
+}
+
+header {
+    background-color: #34495f;
+    color: white;
+    padding: 10px;
+}
+
+header > div {
+    width: 1000px;
+    /* background-color: gold; */
+    margin: 0 auto;
+}
+
+header > div::after {
+    content:'';
+    display: block;
+    clear: both;
+}
+
+header h1{
+    margin: 0;
+    float: left;
+    font-size: 1.5rem;
+}
+
+header > div > div {
+    float: right;
+    margin-top: 7px;
+}
+
+header > div> div > i {
+    margin-right: 20px;
+}
+
+section {
+    width: 1000px;
+    /* background-color: gold; */
+    margin: 0 auto;
+}
+
+section .title {
+    background-color: white;
+    padding: 15px 15px 7px 15px;
+
+}
+
+section .title div:nth-child(1) {
+    color: #87acd1;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+section .title div:nth-child(2) {
+    color: #555;
+    font-size: .8rem;
+}
+
+section .content {
+    column-count: 5;
+    padding: 20px;
+}
+
+section .content .item {
+    border: 1px solid #AAA;
+    width: 150px;
+    margin: 0px auto 15px auto;
+    font-size: 14px;
+    background-color: #FFF;
+    color: #333;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px #777;
+    page-break-inside: avoid;
+}
+
+section .content .item img {
+    display: block;
+    margin: 20px auto;
+    box-shadow: -1px -1px 1px #555;
+}
+
+section .content .item .txt {
+    margin: 0px 12px 20px 12px;
+}
+

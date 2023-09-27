@@ -1,0 +1,32 @@
+body {margin-bottom: 500px;}
+
+.box {
+    border: 1px solid black;
+    width: 200px;   
+    height: 200px;
+    margin: 30px;
+}
+
+#box1{
+    background-color: tomato;
+}
+
+#box2{
+    background-color: gold;
+}
+
+#box3 {
+    background-color: cornflowerblue;
+}
+
+body {
+    border: 1px solid black;
+}
+
+body:hover #box2 {
+    /* background-color: purple; */
+    transform: rotate(45deg);
+
+    /* 변화 중심 축 변경 */
+    transform-origin: 0% 0%;
+}

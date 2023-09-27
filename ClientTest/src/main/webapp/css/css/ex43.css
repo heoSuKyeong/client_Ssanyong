@@ -1,0 +1,42 @@
+body {margin-bottom: 500px;}
+
+.box {
+    border: 1px solid black;
+    width: 200px;   
+    height: 200px;
+    margin: 30px;
+}
+
+#box1{
+    background-color: tomato;
+    /* transform: translate(100px, 100px); */
+    /* transform: scale(1.2, 1); */
+    /* transform: rotate(180deg); */
+    /* transform: skew(10deg, 0deg); */
+}
+
+#box1:hover {
+    /* transform: translate(0px, 50px); */
+    transform: rotate(45deg);
+}
+
+#box2{
+    background-color: gold;
+}
+
+#box3 {
+    background-color: cornflowerblue;
+}
+
+input[type=text] {
+    font-size: 2rem;
+    padding: 5px;
+    outline: none;
+    transform: rotate(180deg);
+}
+
+
+#cat > img:hover {
+    /* transform: translate(0px, -20px); */
+    transform: scale(1.2);
+}

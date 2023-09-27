@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/1f653a59f2.js" crossorigin="anonymous"></script>
+
+    <style>
+        #box {
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            margin: 50px;
+
+            /* border-radius: 150px; */
+            /* border-radius: 50%; */
+
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+        }
+
+        #cat img {
+            border-radius: 15px;
+        }
+
+        #txt1 {
+            border-radius: 10px;
+            border: 1px solid #777;
+            outline: none;
+            padding : 5px 10px;
+        }
+
+        #search {
+            width: 245px;
+        }
+
+        #search input {
+            /* text와 button 여백 제거 */
+            float: left;
+            border: 1px solid black;
+            color: #333;
+            padding: 5px;
+            outline: none;
+
+        }
+
+        #search input[type=text] {
+            /* text와 button 사이의 선을 하나 제거 */
+            border-right: 0px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+
+        }
+
+        #search input[type=button] {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+        }
+
+        #search::after {
+            content:'';
+            display: block;
+            clear: both;
+        }
+/*
+        #icon {
+            font-size: 3rem;
+            color: red;
+        }
+*/ 
+        
+
+        #search2 {
+            width: 245px;
+        }
+
+        #search2 input, #search2 button {
+            /* text와 button 여백 제거 */
+            float: left;
+            border: 1px solid black;
+            color: #333;
+            padding: 5px;
+            outline: none;
+
+        }
+
+        #search2 input[type=text] {
+            /* text와 button 사이의 선을 하나 제거 */
+            border-right: 0px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+
+        }
+
+        #search2 button{
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+        #search2 button:hover{
+            background-color: red;
+        }
+
+        #search2::after {
+            content:'';
+            display: block;
+            clear: both;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, incidunt esse quaerat error quasi eius numquam voluptas itaque accusantium pariatur, ullam velit, atque labore doloribus veniam veritatis odit nihil mollitia.</div>
+
+    <hr>
+
+    <div id="cat">
+        <img src="../asset/images/cat01.jpg">
+        <img src="../asset/images/cat02.jpg">
+        <img src="../asset/images/cat03.jpg">
+        <img src="../asset/images/cat04.jpg">
+        <img src="../asset/images/cat05.jpg">
+    </div>
+
+    <hr>
+
+    <input type="text" id="txt1">
+
+    <hr>
+
+    <h1>검색</h1>
+
+    <div id="search">
+        <input type="text" placeholder="검색어를 입력하세요.">
+        <input type="button" value="search">
+    </div> 
+
+    <hr>
+
+    <div id="search2">
+        <input type="text" placeholder="검색어를 입력하세요.">
+        <button>
+            <i class="fa-solid fa-magnifying-glass" id="icon"></i>
+
+        </button>
+    </div> 
+
+</body>
+</html>

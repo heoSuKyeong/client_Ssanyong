@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input[type=text] {
+            display: block;
+            margin-bottom: 3px;
+            border: 1px solid #555;
+            background-color: #fff;
+            padding: 3px;
+            outline: none;
+            color: #333;
+        }
+/* 
+        input[type=text]:required {
+            background-color: gold;
+        }
+
+        input[type=text]:optional {
+            background-color: #ccc;
+        }
+ */
+/*  
+        input[type=text]:disabled {
+            background-color: #999;
+        }
+
+        readonly도 enabled에 속한다 
+        input[type=text]:enabled {
+            background-color: gold;
+        } 
+        */
+
+        input[type=text]:read-only {
+            background-color: gold;
+        }
+        /*
+        input[type=text]:read-write {
+            background-color: #ccc;
+        }
+        */
+        input[type=text]:read-only {
+            cursor: not-allowed;
+        }
+
+
+        /*
+        .cb {
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+        }*/
+
+        .cb {
+            /* 불투명도(0~1)*/
+            opacity: 0.2;
+        }
+
+        .cb:checked {
+            opacity: 1;
+        }
+
+        #cat {
+            visibility: visible;
+        }
+
+        #cd-cat:checked + #cat {
+            visibility: hidden;
+        }
+
+        #cd2 + div {
+            /* visibility: hidden; 공간이 사라지지않음*/
+            display: none;
+        }
+
+        #cd2:checked + div {
+            display: block;
+        }
+
+        #item {
+            border: 1px solid black;
+            width: 200px;
+        }
+
+        #item #cb3 {
+            display: none;
+        }
+        #item label {
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant: small-caps;
+            display: block;
+            padding: 10px;
+            background-color: cornflowerblue;
+            color: white;
+            cursor: pointer;
+        }
+
+        #item div {
+            padding: 15px;
+            border-top: 1px solid black;
+            display: none;
+        }
+
+        #item #cb3:checked ~ div  {
+            display: block;
+        }
+
+        #item #cb3:checked ~ label  {
+            background-color: tomato;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="item">
+        <input type="checkbox" id="cb3">
+        <label for="cb3">Java</label>
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit amet illo soluta similique, atque assumenda aliquid provident error cumque dicta adipisci vitae, numquam quisquam ut. Incidunt numquam blanditiis illo? Est! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus consequuntur veritatis consectetur iste, odio nostrum numquam repellat est suscipit nobis? Praesentium excepturi quam, natus cupiditate enim iure voluptatum minus laborum.</div>
+    </div>
+
+
+    <label for="cb2">제목</label>
+    <input type="checkbox" id="cd2">
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil animi laudantium eaque, accusamus odit ea dignissimos expedita porro, necessitatibus quibusdam aspernatur dolorum fuga iusto natus, deserunt a dolorem veritatis laborum?
+        Cupiditate, dolorem accusantium, repellat possimus, nostrum officiis delectus cum quos sint architecto vero! Quam officiis optio maxime saepe placeat eveniet est eligendi, incidunt a repellat exercitationem! Fuga animi reprehenderit deserunt!
+        Nisi commodi, dolores, ad quaerat consectetur aspernatur rem eum vero laborum a odit ratione assumenda quam blanditiis aliquam obcaecati quidem iusto doloremque veritatis necessitatibus mollitia, aperiam eveniet. Itaque, architecto aut?
+        Eveniet nisi adipisci asperiores inventore, dicta ut, voluptates ullam, esse fuga quas sunt placeat omnis! Impedit, blanditiis illo nam magni aliquid, eos animi iste, ea deleniti architecto dignissimos esse nostrum.
+        Numquam repudiandae, vel eum nobis commodi, officia dolore maiores architecto quo nesciunt, optio iure obcaecati laudantium impedit necessitatibus. Excepturi sapiente iste sint! Aliquam ullam perspiciatis reiciendis temporibus maxime amet facilis.
+        Eveniet id natus doloremque nemo perspiciatis commodi repudiandae nulla aspernatur nisi nesciunt? Minima repellendus eligendi fugiat aspernatur animi facilis autem, perferendis possimus error nesciunt sunt nihil veniam architecto. Deserunt, accusamus!
+        Repellat rerum repellendus, sed ipsam perferendis obcaecati enim consequuntur ab beatae in officia nihil voluptatibus atque cum laboriosam veniam numquam culpa quasi, quidem delectus et. In dignissimos harum quia praesentium!
+        Alias voluptatibus nostrum necessitatibus ratione impedit laudantium quaerat nihil delectus ducimus porro reprehenderit facilis vero consequuntur sint, eum hic. Fugit nisi corrupti non incidunt ea, laudantium provident facilis sunt similique.
+        Saepe iure sapiente cupiditate iste fugiat magnam odit nihil, consequuntur nobis voluptate! Quam, eligendi quis veritatis eveniet quae atque asperiores sit alias ut, autem inventore debitis enim illum, eos harum?
+        Unde quibusdam suscipit a veniam quam, totam cum aspernatur nisi vel fugit asperiores, nesciunt animi adipisci expedita aperiam dignissimos eos repudiandae voluptatibus nulla ab! Aspernatur delectus omnis ipsam id facilis!</div>
+
+    <hr>
+
+    <details>
+        <summary>제목</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil animi laudantium eaque, accusamus odit ea dignissimos expedita porro, necessitatibus quibusdam aspernatur dolorum fuga iusto natus, deserunt a dolorem veritatis laborum?
+        Cupiditate, dolorem accusantium, repellat possimus, nostrum officiis delectus cum quos sint architecto vero! Quam officiis optio maxime saepe placeat eveniet est eligendi, incidunt a repellat exercitationem! Fuga animi reprehenderit deserunt!
+        Nisi commodi, dolores, ad quaerat consectetur aspernatur rem eum vero laborum a odit ratione assumenda quam blanditiis aliquam obcaecati quidem iusto doloremque veritatis necessitatibus mollitia, aperiam eveniet. Itaque, architecto aut?
+        Eveniet nisi adipisci asperiores inventore, dicta ut, voluptates ullam, esse fuga quas sunt placeat omnis! Impedit, blanditiis illo nam magni aliquid, eos animi iste, ea deleniti architecto dignissimos esse nostrum.
+        Numquam repudiandae, vel eum nobis commodi, officia dolore maiores architecto quo nesciunt, optio iure obcaecati laudantium impedit necessitatibus. Excepturi sapiente iste sint! Aliquam ullam perspiciatis reiciendis temporibus maxime amet facilis.
+        Eveniet id natus doloremque nemo perspiciatis commodi repudiandae nulla aspernatur nisi nesciunt? Minima repellendus eligendi fugiat aspernatur animi facilis autem, perferendis possimus error nesciunt sunt nihil veniam architecto. Deserunt, accusamus!
+        Repellat rerum repellendus, sed ipsam perferendis obcaecati enim consequuntur ab beatae in officia nihil voluptatibus atque cum laboriosam veniam numquam culpa quasi, quidem delectus et. In dignissimos harum quia praesentium!
+        Alias voluptatibus nostrum necessitatibus ratione impedit laudantium quaerat nihil delectus ducimus porro reprehenderit facilis vero consequuntur sint, eum hic. Fugit nisi corrupti non incidunt ea, laudantium provident facilis sunt similique.
+        Saepe iure sapiente cupiditate iste fugiat magnam odit nihil, consequuntur nobis voluptate! Quam, eligendi quis veritatis eveniet quae atque asperiores sit alias ut, autem inventore debitis enim illum, eos harum?
+        Unde quibusdam suscipit a veniam quam, totam cum aspernatur nisi vel fugit asperiores, nesciunt animi adipisci expedita aperiam dignissimos eos repudiandae voluptatibus nulla ab! Aspernatur delectus omnis ipsam id facilis!</p>
+    </details>
+
+    <hr>
+
+    <div>
+        <input type="checkbox" id="cd-cat">
+        <img src="../asset/images/catty01.png" id="cat">
+    </div>
+
+    <div>
+        <input type="checkbox" class="cb">
+        <input type="checkbox" class="cb">
+        <input type="checkbox" class="cb">
+    </div>
+    
+    <div id="list">
+        <input type="text" value="1" required>
+        <input type="text" value="2" readonly>
+        <input type="text" value="3" readonly> 
+        <input type="text" value="4">
+        <input type="text" value="5" required>
+        <input type="text" value="6" disabled>
+        <input type="text" value="7">
+        <input type="text" value="6" disabled>
+        <input type="text" value="8" >
+        <input type="text" value="9">
+        <input type="text" value="10" required>
+
+    </div>
+    <hr>
+
+    <input type="button" value="버튼">
+
+
+</body>
+</html>

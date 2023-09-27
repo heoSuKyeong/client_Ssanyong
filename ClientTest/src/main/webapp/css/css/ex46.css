@@ -1,0 +1,32 @@
+body {
+    padding-bottom: 500px;
+}
+
+#box {
+    border: 10px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+    margin: 100px;
+    overflow: hidden;
+
+    /* transition-property: width, height, background-color; */
+    transition-property: all;
+    transition-duration: 3s;
+}
+
+body:hover #box {
+/*     
+    width: 600px;
+    height: 600px;
+    background-color: tomato; 
+    */
+    /* font-size: 20rem; */
+    /* opacity: 0; */
+    /* border-radius: 50%; */
+    /* box-shadow: 5px 5px 5px #555; */
+    /* margin-left: 0; */
+    /* transform: scale(-1,1); */
+    transform: rotate(3600deg);
+}
+
