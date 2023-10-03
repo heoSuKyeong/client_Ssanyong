@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            border: 1px solid black;
+            height: 150px;
+        }
+
+        .ball {
+            border: 1px solid black;
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+            text-align: center;
+            margin-top: 48px;
+            font-weight: bold;
+            position: absolute;
+            transition: all 5s;
+        }
+
+        .box:hover{
+            /* left: 1298px; */
+            margin-left: 1100px;
+            transform: rotate(3600deg);
+        }
+
+        #ball1 {
+            background-color: tomato;
+            transition-timing-function: linear;
+        }
+        #ball2 {
+            background-color: gold;
+            transition-timing-function: linear;
+        }
+        #ball3 {
+            background-color: orange;
+            transition-timing-function: linear;
+        }
+        #ball4 {
+            background-color: greenyellow;
+            transition-timing-function: linear;
+        }
+        #ball5 {
+            background-color: cornflowerblue;
+            transition-timing-function: linear;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id=box style="width: 1400px; margin: 10px auto;">
+        <div class="box">
+            <div id="ball1" class="ball">A</div>
+        </div>
+        <div class="box">
+            <div id="ball2" class="ball">B</div>
+        </div>
+        <div class="box">
+            <div id="ball3" class="ball">C</div>
+        </div>
+        <div class="box">
+            <div id="ball4" class="ball">D</div>
+        </div>
+        <div class="box">
+            <div id="ball5" class="ball">E</div>
+        </div>
+    </div>
+</body>
+</html>
