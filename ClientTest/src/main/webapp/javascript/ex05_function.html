@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function m1() {
+            console.log('m1');
+        }
+
+        m1();
+
+        function m2(name) {
+            console.log('name: ' + name);
+
+            console.log(arguments[0]); /* 가독성의 문제로 잘 사용하지 않는다.*/
+            console.log(arguments[1]);
+            console.log(arguments[2]);
+        }
+
+        m2('홍길동');
+        m2('아무개');
+        m2('하하하');
+        m2('하하하', '아무개', '홍길동');
+
+    
+        function m3(name, age) {
+            console.log(name, age);
+            console.log(name + '-' + age);
+        }
+
+        m3('홍길동', 20);
+
+
+        var num1;
+        console.log(num1);  //undefined
+
+        var num2 = null;
+        console.log(num2);  //null
+
+        console.log(undefined == null);     //true
+        console.log(undefined === null);    //false
+
+        console.log(10 == '10');            //true
+        console.log(10 === '10');           //false
+
+        function m4() {
+            return 100;
+        }
+
+        console.log(m4());
+
+
+    </script>
+</body>
+</html>

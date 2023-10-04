@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+
+        }
+        /*
+        html {
+            border: 10px solid red;
+        }
+        
+        body {
+            border: 10px solid blue
+        }
+        */
+        main {
+            display: grid;
+            grid-template-rows: 50px 200px auto;
+            grid-template-columns: 200px minmax(900px, 1fr);
+            height: 100vh; /*viewport-height*/
+        }
+
+        #menu {
+            background-color: orange;
+            grid-row: 1/4;
+            text-align: center;
+
+        }
+
+        #menu > h1 {
+            color: white;
+        }
+
+        #menu > hr {
+            border: 0;
+            border-bottom: 1px dashed white;
+        }
+
+        #menu >ul {
+            padding: 0;
+            color: white;
+        }
+
+        #menu > div {
+            color:  white;
+            font-size: 14px;
+            padding: 20px;
+        }
+
+        #search {
+            background-color: gold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #search input[type=text] {
+            border: 1px solid yellow;
+            width: 430px;
+            padding: 5px;
+            outline: none;
+        }
+
+        #search button {
+            width: 100px;
+            height: 26px;
+            border: 1px solid yellow;
+            background-color: yellow;
+        }
+
+        #banner {
+            background-color: green;
+        }
+
+        #banner > img {
+            width: 100%;
+            height: 100%;
+            /* 백그라운드 이미지가 아니여도 종횡비를 맞출 수 있다 */
+            object-fit: cover;
+        }
+
+        #list {
+            background-color: cornflowerblue;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap : 20px;
+            padding: 20px;
+        }
+
+        #list > div {
+             background-color: yellowgreen;
+        }
+
+        #list > div > img {
+            display: block;
+            margin: 20px auto;
+            border: 3px solid white;
+            padding: 3px;
+        }
+
+        #list > div > div {
+            margin: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /*스마트폰~태블릿(세로)*/
+        @media screen and (max-width: 768px) {
+
+            main {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 210px 50px 200px auto;
+                height: 100vh;
+            }
+
+            #menu {
+                grid-row: auto;
+            }
+
+            #menu ul {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+            }
+
+            #menu li {
+                list-style-type: none;
+                margin: 0px 7px;
+            }
+
+            #menu hr {
+                display: flex;
+            }
+
+            #list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <main>
+        <div id="menu">
+            <h1>Study</h1>
+
+            <ul>
+                <li>Java</li>
+                <li>Oracle</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <hr>
+
+            <ul>
+                <li>Class</li>
+                <li>Method</li>
+                <li>Interface</li>
+                <li>Property</li>
+                <li>Attribute</li>
+            </ul>
+        </div>
+
+
+        <div id="search">
+            <input type="text">
+            <button>search</button>
+        </div>
+
+        <div id="banner">
+            <img src="../asset/images/gimbal.jpg">
+        </div>
+
+        <div id="list">
+            <div>
+                <img src="../asset/images/rect_icon01.png" alt="">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero culpa corrupti consectetur iste, quaerat repellat sint voluptas autem odit omnis. Aut quam nulla vel, natus iste tempore exercitationem suscipit accusamus?</div>
+            </div>
+            <div>
+                <img src="../asset/images/rect_icon02.png" alt="">
+                <div>Consequuntur recusandae iste at itaque delectus dignissimos possimus maiores impedit, aliquid, debitis consectetur! Facilis accusantium perferendis nemo velit, reprehenderit repellat quo temporibus quasi tempora voluptates dolorum culpa ullam maxime? Ipsam!</div>
+            </div>
+            <div>
+                <img src="../asset/images/rect_icon03.png" alt="">
+                <div>Minima earum ex voluptas facere fugit mollitia tenetur vitae aperiam sint ullam, voluptatem ea assumenda, facilis asperiores ut modi aspernatur. Amet exercitationem accusantium ad corrupti repellendus iure debitis atque ipsam.</div>
+            </div>
+            <div>
+                <img src="../asset/images/rect_icon04.png" alt="">
+                <div>Vero saepe delectus exercitationem veniam distinctio deleniti totam esse, nam at optio error, fuga hic dolores repellat voluptate! Maxime perferendis modi deleniti veritatis inventore repellendus maiores ab cum dolores officia.</div>
+            </div>
+            <div>
+                <img src="../asset/images/rect_icon05.png" alt="">
+                <div>Id saepe eligendi tenetur illum, aut ut est provident, neque earum animi cumque. Officia veritatis, mollitia nesciunt sint totam, perferendis eaque aspernatur deleniti dolorem, ipsa nemo odit consectetur excepturi eum!</div>
+            </div>
+            <div>
+                <img src="../asset/images/rect_icon06.png" alt="">
+                <div>Officia, fugit nesciunt dicta porro illo velit reiciendis debitis beatae distinctio nisi cum libero earum nihil sequi a eius ipsum necessitatibus perspiciatis repellendus obcaecati minima! Molestiae esse consectetur dignissimos! Beatae.</div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
