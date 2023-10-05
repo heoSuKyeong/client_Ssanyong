@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form name="form1">
+        <input type="button" value="뒤로가기" name="btn1">
+        <input type="button" value="앞으로가기" name="btn2">
+        <input type="button" value="뒤로가기(2단계)" name="btn3">
+
+    </form>
+
+    <script>
+        window.document.form1.btn1.onclick = m1;
+        window.document.form1.btn2.onclick = m2;
+        window.document.form1.btn3.onclick = m3;
+
+        function m1() {
+            //뒤로가기
+            window.history.back();
+        }
+        function m2() {
+            //앞으로가기
+            window.history.forward();
+        }
+        function m3() {
+            //뒤로가기(2단계)
+            //ex19 > 네이버 > 구글 > ex19 > 다음 > 쿠팡 > ex19
+            window.history.go(-2);
+        }
+
+        /*
+        BOM
+        1. 객체 접근
+        2. 이벤트
+        3. 속성 조작
+        4. window, screen, location, history
+    </script>
+
+</body>
+</html>

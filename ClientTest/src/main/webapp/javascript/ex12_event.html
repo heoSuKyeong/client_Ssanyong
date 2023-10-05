@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        input {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event</h1>
+
+    <form name="form1">
+        <input type="text" name="txt1">
+        <input type="button" value="button" name="btn1" onclick="window.document.form1.txt1.value='홍길동';">
+        <input type="button" value="button" name="btn2" onclick="m1()">
+        <input type="button" value="button" name="btn3">
+    </form>
+
+    <script>
+        function m1() {
+            window.document.form1.txt1.value='홍길동';
+        }
+        //동적 방법 1
+        // window.document.form1.btn3.onclick = m2;    //함수 포인터(함수의 위치 값을 넣는다)
+
+        //동적 방법 2
+        var check = 0;
+        if (check <= 0) {
+            window.document.form1.btn3.onclick = m2; 
+        }
+        function m2() {
+            window.document.form1.txt1.value='동적';
+        }
+    </script>
+
+
+</body>
+</html>

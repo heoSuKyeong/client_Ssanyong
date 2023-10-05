@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 문자열 길이
+        var txt = 'Hello';
+
+        console.log(txt.length);    //5
+    </script>
+    <script>
+        //2. 검색
+        //indexOf()
+        //lastIndexOf()
+        var txt = 'Hello';
+
+        console.log(txt.indexOf('o'));      //4
+        console.log(txt.lastIndexOf('l'));  //3
+    </script>
+
+    <script>
+        //3. 대소문자 변환
+        var txt = 'Hello';
+        console.log(txt.toUpperCase());     //HELLO
+        console.log(txt.toLowerCase());     //hello
+    </script>
+
+    <script>
+        //4. 추출
+        //substring
+        //substr
+        //charAt
+        //charCodeAt
+        var txt = 'Hello';
+        console.log(txt.substring(1,2));    //e
+        console.log(txt.substring(1));      //ello
+        console.log(txt.substr(1,2));       //el
+
+        console.log(txt.charAt(1));         //e
+        console.log(txt.charCodeAt(1))      //101   
+        //캐릭터 자료형이 없기에 charCodeAt 프로퍼티로 문자코드값을 추출한다.       
+    </script>
+
+    <script>
+        //5. 치환
+        //replace
+        //처음 만나는 요소만 치환한다.
+        //정규표현식으로 반복 치환할 수 있다.
+        var txt = 'Hello~ Hong~ Bye~ Hong~';
+        console.log(txt.replace('Hong', 'Lee'));    //Hello~ Lee~ Bye~ Hong~
+        console.log(txt.replace(/Hong/g, 'Lee'));   //Hello~ Lee~ Bye~ Lee~
+        //'g' global의 약어로 반복하여 치환할 수 있다.
+    </script>
+
+    <script>
+        //6. 공백 제거
+        var txt = '   하나   둘   셋        ';
+        console.log('@' + txt.trim() + '@');        //@하나   둘   셋@
+        console.log('@' + txt.trimLeft() + '@');    //@하나   둘   셋        @
+        console.log('@' + txt.trimRight() + '@');   //@   하나   둘   셋@
+    </script>
+
+    <script>
+        //7. 분할
+        //split
+        var txt = '홍길동,이순신,윤봉길';
+        console.log(txt.split(','));        // ['홍길동', '이순신', '윤봉길']
+    </script>
+
+    <script>
+        //8. 검색
+        var txt = '홍길동';
+        console.log(txt.startsWith('홍'));      //true
+        console.log(txt.endsWith('동'));        //true
+    </script>
+
+    <script>
+        //9. 문자열 채우기
+        //padStart
+        //padEnd
+        //repeat
+        var txt = '1';
+        console.log(txt.padStart(3, '0'));      //001
+        console.log(txt.padEnd(3, 'A'));        //1AA
+        console.log(txt.repeat(3));             //111
+    </script>
+
+    <script>
+
+    </script>
+</body>
+</html>
