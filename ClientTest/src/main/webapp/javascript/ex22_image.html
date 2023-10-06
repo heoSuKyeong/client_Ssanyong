@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>이미지</h1>
+
+    <input type="button" value="버튼" name="btn1">
+    <hr>
+
+    <img src="../asset/images/cat01.jpg" name="cat01">
+    <hr>
+    <img src="../asset/images/cat01.jpg" name="cat02">
+    <hr>
+    <img src="../asset/images/switch_on.png" name="sw">
+    <hr>
+    <img src="../asset/images/circle_icon01.png" name="icon">
+    <hr>
+    <img src="../asset/images/dog01.jpg" name="viewer">
+    <hr>
+    <img src="../asset/images/0.png" name="num">
+
+    <script>
+        document.all['btn1'].onclick = m1;
+
+        function m1() {
+            //이미지 크기 변경
+            // document.images['cat01'].width = 500;
+
+            //이미지 사진 변경
+            document.images['cat01'].src = '../asset/images/cat02.jpg';
+        }
+    </script>
+    <script>
+        //롤오버 이미지
+        document.images['cat02'].onmouseover = m2;
+        document.images['cat02'].onmouseout = m3;
+
+        function m2() {
+            document.images['cat02'].src = '../asset/images/cat02.jpg';
+        }
+
+        function m3() {
+            document.images['cat02'].src = '../asset/images/cat01.jpg';
+        }
+
+    </script>
+    <script>
+        //이미지로 토글 버튼 만들기
+        document.images['sw'].onclick = m4;
+
+        function m4() {
+            //파일명만 추출하기
+            // alert(document.images['sw'].src.endWith('switch_on.png'));
+            if (document.images['sw'].src.endsWith('switch_on.png')) {
+                document.images['sw'].src = '../asset/images/switch_off.png';
+                document.body.bgColor = '#000';
+            } else {
+                document.images['sw'].src = '../asset/images/switch_on.png';
+                document.body.bgColor = '#FFF';
+            }
+        }
+
+    </script>
+    <script>
+        //이미지 연속 변경
+        document.images['icon'].onclick = m5;
+        var n=1;
+
+        function m5() {
+            n++;
+            if(n>18) {
+                n=1;
+            }
+            document.images['icon'].src = '../asset/images/circle_icon'+ (n+'').padStart(2, '0') +'.png';
+            console.log(n);
+        }
+
+    </script>
+
+    <script>
+        //viewer : 방향키로 이미지 이동
+        // window.onkeydown = m6;
+        var no = 1;
+
+        function m6() {
+            if (event.keyCode == 37){           //좌(이전) 이동
+                no--;   
+                if (no<1) {
+                    alert('첫번째 이미지입니다.');
+                    no++;
+                    return;
+                }
+            } else if (event.keyCode == 39) {   //우(다음) 이동
+                no++;
+
+                if (no>5) {
+                    alert('마지막 이미지입니다.');
+                    no--;
+                    return;
+                }
+            }
+
+            document.images['viewer'].src = '../asset/images/dog0' + no + '.jpg';
+        }
+
+    </script>
+
+    <script>
+        //숫자를 입력받아 이미지 변경하기
+        window.onkeydown = m7;
+
+        function m7() {
+            // alert(event.keyCode);
+            //0(48) ~ 9(57) 
+            // alert(event.keyCode -48);
+
+            if(event.keyCode >= 48 && event.keyCode <=57) {
+                document.images['num'].src = '../asset/images/'+(event.keyCode - 48) + '.png';
+            }
+        }
+
+    </script>
+
+</body>
+</html>
