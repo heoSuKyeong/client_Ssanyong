@@ -1,0 +1,88 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://pinnpublic.dothome.co.kr/question/css/box2_impl.html
+Subject: 
+Date: Mon, 9 Oct 2023 17:32:35 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--QO4aOBLW2JuhXC4kkZ2WzFUTlE4GfMXjMPuZITNbg6----"
+
+
+------MultipartBoundary--QO4aOBLW2JuhXC4kkZ2WzFUTlE4GfMXjMPuZITNbg6----
+Content-Type: text/html
+Content-ID: <frame-A3FB1FDEC0EF25D78484CD4D51BC6105@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://pinnpublic.dothome.co.kr/question/css/box2_impl.html
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/css" href=3D=
+"cid:css-8b2b77a6-5fac-4384-a305-853a645a7020@mhtml.blink" />
+
+<title></title>
+
+</head>
+<body>
+	<div style=3D"width: 900px; margin: 30px auto;">
+
+		<div id=3D"box">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>=09
+	</div>
+
+</body></html>
+------MultipartBoundary--QO4aOBLW2JuhXC4kkZ2WzFUTlE4GfMXjMPuZITNbg6----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-8b2b77a6-5fac-4384-a305-853a645a7020@mhtml.blink
+
+@charset "utf-8";
+
+#box { width: 900px; }
+
+#box div { width: 100px; height: 100px; border: 10px solid black; float: le=
+ft; transition: all 1s ease 0s; margin: 1px; }
+
+#box:hover div { background-color: cornflowerblue; transform: rotate(180deg=
+); }
+------MultipartBoundary--QO4aOBLW2JuhXC4kkZ2WzFUTlE4GfMXjMPuZITNbg6------

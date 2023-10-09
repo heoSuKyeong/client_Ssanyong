@@ -1,0 +1,78 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://pinnpublic.dothome.co.kr/question/css/ball_impl.html
+Subject: Document
+Date: Mon, 9 Oct 2023 17:33:44 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--C4fLVzvHOFYR2IsFNcF8f0YrSiMtSVwEzKK7lbsfdj----"
+
+
+------MultipartBoundary--C4fLVzvHOFYR2IsFNcF8f0YrSiMtSVwEzKK7lbsfdj----
+Content-Type: text/html
+Content-ID: <frame-790CA52FF8594CA3BD5339065D212222@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://pinnpublic.dothome.co.kr/question/css/ball_impl.html
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/=
+css" href=3D"cid:css-edba8ced-07bb-4f76-bf8d-0cadf393793a@mhtml.blink" />
+=09
+	<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+.0">
+	<meta http-equiv=3D"X-UA-Compatible" content=3D"ie=3Dedge">
+	<title>Document</title>
+=09
+</head>
+<body>
+	<div style=3D"width: 1400px; margin: 20px auto;">
+		<div id=3D"list">
+			<div class=3D"ball">A</div>
+			<div class=3D"ball">B</div>
+			<div class=3D"ball">C</div>
+			<div class=3D"ball">D</div>
+			<div class=3D"ball">E</div>
+			<div class=3D"line"></div>
+			<div class=3D"line"></div>
+			<div class=3D"line"></div>
+			<div class=3D"line"></div>
+			<div class=3D"line"></div>
+		</div>
+	</div>
+
+</body></html>
+------MultipartBoundary--C4fLVzvHOFYR2IsFNcF8f0YrSiMtSVwEzKK7lbsfdj----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-edba8ced-07bb-4f76-bf8d-0cadf393793a@mhtml.blink
+
+@charset "utf-8";
+
+#list { border: 1px solid black; width: 1400px; height: 750px; position: re=
+lative; left: 0px; top: 0px; }
+
+#list .line { height: 149px; border-bottom: 1px solid black; }
+
+#list .line:last-child { border-bottom: 0px; }
+
+#list .ball { border: 1px solid black; border-radius: 50%; width: 100px; he=
+ight: 100px; position: absolute; text-align: center; font-size: 4.4em; font=
+-weight: bold; transition: all 5s ease 0s; }
+
+#list .ball:nth-child(1) { background-color: tomato; left: 0px; top: 47px; =
+transition-duration: 7s; }
+
+#list .ball:nth-child(2) { background-color: gold; left: 0px; top: 197px; t=
+ransition-duration: 4s; }
+
+#list .ball:nth-child(3) { background-color: orange; left: 0px; top: 347px;=
+ }
+
+#list .ball:nth-child(4) { background-color: greenyellow; left: 0px; top: 4=
+97px; transition-duration: 8s; }
+
+#list .ball:nth-child(5) { background-color: cornflowerblue; left: 0px; top=
+: 647px; transition-duration: 4.5s; }
+
+#list:hover > .ball { left: 1298px; transform: rotate(3600deg); }
+------MultipartBoundary--C4fLVzvHOFYR2IsFNcF8f0YrSiMtSVwEzKK7lbsfdj------

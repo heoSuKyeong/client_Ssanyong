@@ -1,0 +1,70 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://pinnpublic.dothome.co.kr/question/css/ball2_impl.html
+Subject: 
+Date: Mon, 9 Oct 2023 17:33:54 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--NPVjX9whultrYiSve2pFGdBLY430m2EUJluxXXWluD----"
+
+
+------MultipartBoundary--NPVjX9whultrYiSve2pFGdBLY430m2EUJluxXXWluD----
+Content-Type: text/html
+Content-ID: <frame-5306CEFFB914755BA9BE8A2A635B588D@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://pinnpublic.dothome.co.kr/question/css/ball2_impl.html
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/css" href=3D=
+"cid:css-730ec5df-aacc-4056-8180-8add8800c177@mhtml.blink" />
+
+<title></title>
+
+</head>
+<body>
+	<div style=3D"width: 650px; margin: 30px;">
+		<div id=3D"box">
+			<div id=3D"ball1" class=3D"ball"></div>
+			<div id=3D"ball2" class=3D"ball"></div>
+			<div id=3D"ball3" class=3D"ball"></div>
+			<div id=3D"ball4" class=3D"ball"></div>
+			<div id=3D"ball5" class=3D"ball"></div>
+			<div id=3D"ball6" class=3D"ball"></div>
+			<div id=3D"ball7" class=3D"ball"></div>
+		</div>
+	</div>
+
+</body></html>
+------MultipartBoundary--NPVjX9whultrYiSve2pFGdBLY430m2EUJluxXXWluD----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-730ec5df-aacc-4056-8180-8add8800c177@mhtml.blink
+
+@charset "utf-8";
+
+#box { border: 10px solid black; width: 650px; height: 800px; }
+
+.ball { border: 10px solid black; width: 50px; height: 50px; border-radius:=
+ 50%; float: left; margin-left: 20px; animation-name: keyBall; animation-ti=
+ming-function: ease-in; animation-iteration-count: infinite; animation-dire=
+ction: alternate; }
+
+@keyframes keyBall {=20
+  0% { transform: translate(0px, 0px); }
+  100% { transform: translate(0px, 730px); }
+}
+
+#ball1 { background-color: red; animation-duration: 1s; }
+
+#ball2 { background-color: orange; animation-duration: 0.5s; }
+
+#ball3 { background-color: yellow; animation-duration: 0.7s; }
+
+#ball4 { background-color: green; animation-duration: 0.9s; }
+
+#ball5 { background-color: blue; animation-duration: 0.76s; }
+
+#ball6 { background-color: indigo; animation-duration: 1.1s; }
+
+#ball7 { background-color: violet; animation-duration: 0.9s; }
+------MultipartBoundary--NPVjX9whultrYiSve2pFGdBLY430m2EUJluxXXWluD------

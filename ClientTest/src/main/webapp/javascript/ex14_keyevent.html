@@ -31,12 +31,12 @@
         var txt2 = window.document.form1.txt2;
         var txt3 = window.document.form1.txt3;
 
-        // txt1.onkeydown = m1;
+        txt1.onkeydown = m1;
         txt1.onkeyup = m2;
-        txt1.onkeypress = m3;
+        // txt1.onkeypress = m3;
 
         function m1() {
-            // console.log('keydown');
+            console.log('keydown');
             // console.log(event.keyCode);
             /*
             if (event.keyCode == 37) {
@@ -57,7 +57,7 @@
             }
             */
             // txt1 값이 한 박자 늦게 txt2의 값으로 대입됨
-            txt2.value = txt1.value;
+            // txt2.value = txt1.value;
         }
 
         function m2() {

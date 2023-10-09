@@ -1,0 +1,81 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://pinnpublic.dothome.co.kr/question/css/radius_impl.html
+Subject: 
+Date: Mon, 9 Oct 2023 17:32:57 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--rCpFDz9IcXMpeSO97e2SxGk9Mdnm0cJk0gOMEjVQMT----"
+
+
+------MultipartBoundary--rCpFDz9IcXMpeSO97e2SxGk9Mdnm0cJk0gOMEjVQMT----
+Content-Type: text/html
+Content-ID: <frame-197255216952D07DECDF1EE041D1E0B3@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://pinnpublic.dothome.co.kr/question/css/radius_impl.html
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/css" href=3D=
+"cid:css-d923ba3b-df31-46f0-b6d5-8c01452f5b3b@mhtml.blink" />
+
+<title></title>
+
+</head>
+<body>
+	<!-- test6.htm -->
+	<div style=3D"width: 600px; margin: 30px auto;">
+=09
+		<div id=3D"m1" class=3D"ms">
+			<div id=3D"m2" class=3D"ms">
+				<div id=3D"m3" class=3D"ms">
+					<div id=3D"m4" class=3D"ms">
+						<div id=3D"m5" class=3D"ms">
+							<div id=3D"m6" class=3D"ms">
+								<div id=3D"m7" class=3D"ms"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body></html>
+------MultipartBoundary--rCpFDz9IcXMpeSO97e2SxGk9Mdnm0cJk0gOMEjVQMT----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-d923ba3b-df31-46f0-b6d5-8c01452f5b3b@mhtml.blink
+
+@charset "utf-8";
+
+.ms { padding: 25px; transition: all 1s ease 0s; }
+
+#m1:hover .ms { border-radius: 10%; }
+
+#m2:hover .ms { border-radius: 20%; }
+
+#m3:hover .ms { border-radius: 30%; }
+
+#m4:hover .ms { border-radius: 40%; }
+
+#m5:hover .ms { border-radius: 50%; }
+
+#m6:hover .ms { border-radius: 60%; }
+
+#m7:hover .ms { border-radius: 70%; }
+
+#m1 { background-color: red; width: 500px; height: 500px; }
+
+#m2 { background-color: orange; width: 450px; height: 450px; }
+
+#m3 { background-color: yellow; width: 400px; height: 400px; }
+
+#m4 { background-color: green; width: 350px; height: 350px; }
+
+#m5 { background-color: blue; width: 300px; height: 300px; }
+
+#m6 { background-color: indigo; width: 250px; height: 250px; }
+
+#m7 { background-color: violet; width: 200px; height: 200px; }
+------MultipartBoundary--rCpFDz9IcXMpeSO97e2SxGk9Mdnm0cJk0gOMEjVQMT------
