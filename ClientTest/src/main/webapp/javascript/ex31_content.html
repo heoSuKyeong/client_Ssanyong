@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>content</h1>
+
+    <input type="button" value="버튼" id="btn1">
+    <input type="button" value="버튼" id="btn2">
+
+    <hr>
+
+    <div id="div1">콘텐츠 영역</div>
+
+    <script>
+        document.getElementById('btn1').onclick = m1;
+        function m1() {
+            var div1 = document.getElementById('div1');
+
+            //읽기
+            // alert(div1.innerText);
+            // alert(div1.innerHTML);
+            // alert(div1.textContent);
+
+            //쓰기
+            // div1.innerText = '콘텐츠 수정1';
+            // div1.innerHTML = '콘텐츠 수정2';
+            // div1.textContent = '콘텐츠 수정3';
+
+            // div1.innerText = '콘<b>텐</b>츠'
+            div1.innerHTML = '콘<b>텐</b>츠'
+            // div1.textContent = '콘<b>텐</b>츠'
+
+            //동적으로 태그 생성하기
+            /*
+            for (var i=0; i<10; i++) {
+                div1.innerHTML += '<input type="text">';
+            }
+            */
+
+            //div1.innerHTML += '<img src="../asset/images/catty01.png">';
+
+        }
+
+        //동적으로 태그 생성하기
+        document.getElementById('btn2').onclick = m2;
+        function m2() {
+            if (document.getElementById('div1').innerHTML=='') {
+                div1.innerHTML += '<input type="text" value="콘텐츠">';
+            } else {
+                document.getElementById('div1').innerHTML='';
+            }
+        }
+        
+    </script>
+</body>
+</html>

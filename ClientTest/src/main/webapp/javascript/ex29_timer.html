@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>타이머</h1>
+    <form name="form1">
+        <fieldset>
+            <legend>setTimeout</legend>
+            <input type="button" value="버튼" name="btn1">
+            <input type="text" name="txt1">
+        </fieldset>
+        <fieldset>
+            <legend>setInterval</legend>
+            <input type="button" value="버튼" name="btn2">
+            <input type="text" name="txt2">
+        </fieldset>
+        <fieldset>
+            <legend>조작</legend>
+            <input type="button" value="시작" name="btn3">
+            <input type="button" value="멈춤" name="btn4">
+            <input type="text" name="txt3">
+        </fieldset>
+    </form>
+
+    <hr>
+
+    <img src="../asset/images/catty01.png" name="cat1">
+
+    <script>
+        var btn1 = document.form1.btn1;
+        var btn2 = document.form1.btn2;
+        var txt1 = document.form1.txt1;
+        var txt2 = document.form1.txt2;
+        
+        btn1.onclick = m1;
+        function m1() {
+            setTimeout(f1, 1000);   //3초 후에 f1를 실행한다
+        }
+
+        function f1() {
+            // alert('f1');
+            txt1.value = (new Date()).toLocaleTimeString();
+        }
+        
+        btn2.onclick = m2;
+        function m2() {
+            setInterval(f2, 1000);
+        }
+        
+        function f2() {
+            // alert('f2');
+            txt2.value = (new Date()).toLocaleTimeString();
+        }
+
+        
+    </script>
+    <script>
+
+        var btn3 = document.form1.btn3;
+        var btn4 = document.form1.btn4;
+        var txt3 = document.form1.txt3;
+
+        var n =1;
+        var timer =0;
+        
+        btn3.onclick = m3;
+        function m3() {
+            if(timer == 0){
+                timer = setInterval(f3, 100);   //0.1s
+            }
+        }
+
+        function f3() {
+            txt3.value = n;
+            n++;
+        }
+        
+        btn4.onclick = m4;
+        function m4() {
+            clearInterval(timer);
+            timer=0;
+        }
+    </script>
+    <script>
+
+        var btn3 = document.form1.btn3;
+        var btn4 = document.form1.btn4;
+        var txt3 = document.form1.txt3;
+
+        var n =1;
+        var timer =0;
+        var timerlist = [];
+
+        btn3.onclick = m3;
+        function m3() {
+            timer = setInterval(f3, 100);   //0.1s
+            timerlist.push(timer);
+        }
+
+        function f3() {
+            txt3.value = n;
+            n++;
+        }
+        
+        btn4.onclick = m4;
+        function m4() {
+            //순차중지
+            // timer = timerlist.pop();
+            // clearInterval(timer);
+
+            //일괄중지
+            for (var i=0; i<timerlist.length; i++) {
+                clearInterval(timerlist[i]);
+            }
+        }
+    </script>
+    <script>
+        //이미지 슬라이더
+        var cat1 = document.images['cat1'];
+        var m =1;
+        var timer =0;
+
+        cat1.onclick = m5;
+        function m5() {
+            if (timer==0){
+                timer = setInterval(f5, 500);
+
+            } else {
+                clearInterval(timer);
+                timer=0;    //reset
+            }
+        }
+
+        function f5() {
+            m++;
+            if (m>9) m=1;   //9장의 사진 무한루프
+            cat1.src = "../asset/images/catty0" + m + ".png";
+        }
+    </script>
+</body>
+</html>

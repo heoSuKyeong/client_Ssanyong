@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 15px;
+            margin: 15px;
+        }
+
+        #me {
+            border: 10px solid cornflowerblue;
+
+        }
+
+        .check {
+            outline: 10px solid coral;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Axis</h1>
+
+    <input type="button" value="버튼" id="btn1">
+    <hr>
+    <div>
+        할아버지
+        <div>
+            큰아버지
+            <div>사촌</div>
+        </div>
+        <div>
+            아버지
+            <div>큰형</div>
+            <div>작은형</div>
+            <div id="me">
+                나
+                <!-- DOM 트리 -->
+                <div>자식</div>
+                <div>
+                    자식
+                    <div>손자</div>
+                </div>
+                <div>자식</div>
+            </div>
+        </div>
+        <div>
+            작은아버지
+            <div>사촌</div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('me').onclick = m1;
+
+        function m1() {
+
+            var me = document.getElementById('me');
+
+            // <body class = "check">
+            // document.body.className = 'check';  //class라는 예약어 때문에 className이라고 쓴다.
+
+            //자식 태그
+            // me.childNodes : 자식 노드들
+            // alert(me.childNodes.length);    //7(엔터도 포함)
+            
+            //childNodes
+            for (var i=0; i<me.childNodes.length; i++) {
+                // console.log(me.childNodes[i]);
+                // console.log(me.childNodes[i].nodeType, me.childNodes[i].nodeName, me.childNodes[i].nodeValue);
+
+                // if(me.childNodes[i].nodeType==1 
+                //     && me.childNodes[i].nodeName == 'DIV') {
+                //         me.childNodes[i].className = 'check'
+                //     }
+            }
+            //children
+            // for (var i=0; i<me.children.length; i++) {
+            //     me.children[i].className = 'check';
+            // }
+
+            // me.children[1].firstElementChild.className = 'check'
+
+            // me.parentNode.className = 'check';  //아버지
+            // me.parentElement.className = 'check';   //아버지
+            // me.parentElement.parentElement.parentElement.className = 'check';   //body 태그
+            // me.parentElement.parentElement.parentElement.parentElement.className = 'check';   //html 태그
+
+            // console.log(me.parentElement.parentElement.parentElement.parentElement.nodeName);
+            // console.log(me.parentElement.parentElement.parentElement.parentElement.parentNode);
+
+            // me.parentElement.parentElement.firstElementChild.className = 'check';   //큰아버지
+            // me.parentElement.parentElement.firstElementChild.firstElementChild.className = 'check';   //큰아버지 아들 (사촌)
+            
+            // me.parentElement.firstElementChild.className = 'check';     //큰형
+
+            // me.previousElementSibling.className = 'check';  //작은형
+            // me.previousElementSibling.previousElementSibling.className = 'check';  //큰형
+
+            // me.nextElementSibling.className = 'check';
+            me.nextElementSibling.className = 'check';
+        }
+
+    </script>
+
+</body>
+</html>

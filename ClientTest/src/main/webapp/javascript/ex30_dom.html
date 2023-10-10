@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input {display: block; margin-bottom: 5px;}
+    </style>
+</head>
+<body>
+    
+    <h1>DOM</h1>
+
+    <form name="form1">
+        <h2 id="title">Control</h2>
+        <div>
+            <input type="text" name="txt1" id="txt1" class="txts">
+            <input type="text" name="txt2" id="txt2" class="txts">
+            <input type="text" name="txt3" id="txt3" class="txts">
+            <input type="button" value="버튼" name="btn1">
+        </div>
+    </form>
+
+    <script>
+        //BOM 방식
+        document.form1.txt1.value = 'BOM';
+
+        //DOM 방식
+        document.getElementById('txt1').value = 'DOM';
+
+        // BOM이나 DOM으로 검색된 결과 객체(태그)는 동일하다.
+        // alert(document.form1.txt1 === document.getElementById('txt1'));
+
+        // p태그도 적용가능하다
+        //document.getElementById('title').align = 'center';
+    </script>
+    <script>
+        var txts = document.getElementsByClassName('txts');
+        //alert(txts.length);     //3
+        
+        // for(var i=0; i<txts.length; i++) {
+        //     txts[i].value = i;
+        // }
+
+    </script>
+    <script>
+        document.getElementsByName('txt1')[0].value = 'DOM';
+
+    </script>
+    <script>
+        var list = document.getElementsByTagName('input');
+
+        // for(var i=0; i<list.length; i++) {
+        //     alert(list[i].id);
+        //     list[i].value = i;
+        // }
+    </script>
+    <script>
+        document.querySelector('#txt1').value = 100;
+        document.querySelector('h1').align = 'center';
+        document.querySelector('input:nth-child(3)').value = 300;
+
+        // alert(document.querySelectorAll('.txts').length);   //3
+    </script>
+
+</body>
+</html>
