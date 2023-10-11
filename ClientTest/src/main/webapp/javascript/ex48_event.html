@@ -53,13 +53,44 @@
             list[i].onmousedown = function() {
 
                 if (event.buttons == 1) {
-                    let img = document.createElement('img');
-                    img.setAttribute('src', '../asset/images/rect_icon01.png');
-                    event.target.appendChild(img);
-                } else if (event.button == 2) {
-                    let img = document.createElement('img');
-                    img.setAttribute('src', '../asset/images/rect_icon02.png');
-                    event.target.appendChild(img);
+                    
+                    // alert(event.target.nodeName);
+                    if(event.target.nodeName == 'TD') {
+                        // 비어있는 <td>
+                        let img = document.createElement('img');
+                        img.setAttribute('src', '../asset/images/rect_icon01.png');
+                        event.target.appendChild(img);
+                        // event.currentTarget.appendChild(img);
+                    } else {
+                        // <img> 기본 이미지 제거
+                        event.currentTarget.removeChild(event.currentTarget.firstElementChild);
+                        let img = document.createElement('img');
+                        img.setAttribute('src', '../asset/images/rect_icon01.png');
+                        event.currentTarget.appendChild(img);
+                    }
+                    
+                } else if (event.buttons == 2) {
+
+                    if(event.target.nodeName == 'TD') {
+                        let img = document.createElement('img');
+                        img.setAttribute('src', '../asset/images/rect_icon02.png');
+                        event.target.appendChild(img);   
+                        
+                    } else {
+                        event.currentTarget.removeChild(event.currentTarget.firstElementChild);
+                        let img = document.createElement('img');
+                        img.setAttribute('src', '../asset/images/rect_icon02.png');
+                        event.currentTarget.appendChild(img);   
+
+                    }
+
+                } else if (event.buttons == 4) {
+                    // 클릭한 이미지를 삭제
+                    // 부모태그.removeChild(자식태그)
+                    // event.target.removeChild(event.target.firstElementChild);    //
+                     
+                    // event.target.parentElement.removeChild(event.target);    //1번
+                    event.currentTarget.removeChild(event.currentTarget.firstElementChild);     //2번 / 1번보다 코드 퀄이 더 좋다.
                 }
 
             };
