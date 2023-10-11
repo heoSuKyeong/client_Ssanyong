@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="버튼" id="btn1">
+    <input type="button" value="버튼" id="btn2">
+
+    <script>
+        //함수 안에서 함수 생성 및 호출 가능하다.
+
+        //전역 함수
+        function outer() {
+            
+            //지역 변수
+            let a = 10;
+            console.log('a', a);
+
+            //지역함수
+            function inner() {
+
+                //지역 변수
+                let b = 20;
+                console.log('b', b);
+            }
+            inner();
+            //inner 밖에서 지역 변수 b 호출
+            // console.log('b', b);    //b is not defined
+        }
+
+        outer();
+
+    </script>
+
+    <script>
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+
+        let num1 = 100;     //전역 변수
+
+        btn1.onclick = function() {
+            let num2 = 200;     //지역변수
+
+            btn2.onclick = function () {
+                // alert(num1);
+                alert(num2);    //지역 변수 > num2의 생명주기를 생각하면 이상하다
+            };
+        };
+
+    </script>
+
+</body>
+</html>

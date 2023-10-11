@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        //JavaScrpt의 객체는 프로퍼티를 자유롭게 추가할 수 있다.
+        //기존 객체도 원하는 대로 프로퍼티를 추가할 수 있다.
+        const hong = {
+            name: '홍길동'
+        };
+
+        hong.age = 20;
+
+        const now = new Date();
+        // console.log(now);
+
+        now.color = 'yellow';       //사용자 정의 프로퍼티
+        // console.log(now.color);     //yellow
+
+        now.check = function() {
+            console.log('check');
+        };
+
+        // now.check();
+
+    </script>
+
+    <script>
+        function m1() {
+            alert('m1');
+        }
+
+    </script>
+
+    <script>
+        var a1 = '홍길동';
+    
+        var a1 = '이순신';
+
+        let a2 = '하하하';
+        const a3 = '호호호';
+    </script>
+    <script>
+        const obj = {
+            name: '객체',
+            age: 20
+        }
+
+        //제어문
+        for (let p in window) {
+            console.log(p, obj[p]);
+        }
+    </script>
+
+</body>
+</html>

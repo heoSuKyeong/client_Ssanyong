@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+    <input type="button" value="버튼3" id="btn3">
+    <input type="button" value="버튼4" id="btn4">
+    
+    <script>
+        //함수 선언문
+        function m1() {
+            alert('함수 선언문');
+        }
+
+        // m1();
+
+        //함수 표현식
+        let f2 = function () {
+            alert('익명 함수');
+        }
+
+        // f2();   //호출
+
+    </script>
+
+    <script>
+        function m3() {
+            alert('m3');
+        }
+
+        let f3;
+
+        f3 = m3;    //함수를 변수에 저장할 수 있다.
+
+        // m3();   // 호출 1
+        // f3();   // 호출 2
+    </script>
+    <script>
+        /*
+        function m4() {
+            alert('m4');
+        }
+        */
+        let f4;
+
+        f4 = function {    //
+            alert('m4');
+        }
+
+        // f4();
+        // m4();   //m4 is not defined
+
+    </script>
+
+    <script>
+        document.getElementById('btn1').onmousedown = p1;
+
+        //
+        function p1() {
+            alert('btn1 >' + event.buttons);
+        }
+
+        p1();
+
+    </script>
+
+    <script>
+        //이벤트 프로퍼티에 바로 대입
+        //1. 가독성이 향상된다.
+
+        document.getElementById('btn2').onclick = function () {
+            alert('p2');
+        };
+
+        // document.getElementById('btn2').onclick();  //호출
+    </script>
+
+    <script>
+        document.getElementById('btn3').addEventListener('click', p3);
+
+        function p3() {
+            alert();
+        }
+        
+        document.getElementById('btn4').addEventListener('click', function() {
+            alert();
+        });
+    </script>
+    <script>
+        function m5() {
+            alert('m5');
+        }
+
+        function m6(aaa) {
+            aaa();
+        }
+
+        // m6(m5);
+        /*
+        m6(function() {
+            alert('익명');
+        });
+        */
+
+    </script>
+
+    <script>
+        function m7() {
+            alert('m7');
+        }
+
+        function m8() {
+            return m7;
+        }
+        /*
+        let temp = m8();
+        temp();
+        */
+        // m8()();
+        setTimeout(function() {
+            alert('setTimeout');
+        }, 1000);
+    </script>
+</body>
+</html>

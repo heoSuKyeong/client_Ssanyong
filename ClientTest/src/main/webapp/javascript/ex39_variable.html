@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="list">
+        <img src="../asset/images/catty01.png">
+        <img src="../asset/images/catty02.png">
+        <img src="../asset/images/catty03.png">
+        <img src="../asset/images/catty04.png">
+        <img src="../asset/images/catty05.png">
+    </div>
+
+    <script>
+        // var a = 10;
+        // var a = 20;
+    
+        // console.log(a);
+
+    </script>
+
+    <script>
+        let a = 10;     //전역변수
+
+        function m1() {
+            let b = 20;     //지역변수(m1)
+        }
+
+        m1();
+        // console.log(b);     //Uncaught ReferenceError: b is not defined
+
+        if (a>0) {
+            let c = 30;     //지역변수(if)
+            var d = 40;     //전역변수
+        }
+
+        console.log(d);
+        console.log(c);     //Uncaught ReferenceError: c is not defined
+
+        let a = 50;         //Cannot redeclare block-scoped variable 'a'. > 중복 선언 불가능
+
+    </script>
+    <script>
+        const PI = 3.14;
+        PI = 5.28;
+
+        console.log(PI);    //Assignment to constant variable. > 상수는 변경이 불가능
+    </script>
+    <script>
+
+        const list = document.getElementById('list');
+
+        // list.setAttribute('title', '풍선 도움말');
+        // list.innerText='홍길동';
+
+        for (let i=0; i<list.children.length; i++) {
+            list.children[i].onclick = m2;
+        }
+
+        function m2() {
+            event.target.width += 10;
+        }
+
+    </script>
+</body>
+</html>

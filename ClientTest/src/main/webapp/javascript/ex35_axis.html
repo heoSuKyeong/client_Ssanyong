@@ -56,7 +56,7 @@
     </div>
 
     <script>
-        document.getElementById('me').onclick = m1;
+        document.getElementById('btn1').onclick = m1;
 
         function m1() {
 
@@ -100,10 +100,12 @@
             // me.parentElement.firstElementChild.className = 'check';     //큰형
 
             // me.previousElementSibling.className = 'check';  //작은형
-            // me.previousElementSibling.previousElementSibling.className = 'check';  //큰형
+            me.previousElementSibling.previousElementSibling.className = 'check';  //큰형
 
             // me.nextElementSibling.className = 'check';
-            me.nextElementSibling.className = 'check';
+
+            // me.children[0].nextElementSibling.className = 'check';
+
         }
 
     </script>
