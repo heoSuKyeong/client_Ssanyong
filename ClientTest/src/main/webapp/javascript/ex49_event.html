@@ -167,25 +167,24 @@
                     //비어있는 td
                     // event.target.bgColor = 'gold';
                     const img = document.createElement('img');
-                    // img.setAttribute('src', '../asset/images/rect_icon05.png');
+                    img.setAttribute('src', '../asset/images/rect_icon05.png');
                     // ctrl키를 눌렀을 때 다른 이미지 생성
-                    if (event.ctrlKey) {
-                        img.setAttribute('src', '../asset/images/rect_icon05.png');
-                    } else {
-                        img.setAttribute('src', '../asset/images/rect_icon06.png');
-
-                    }
+                    // if (event.ctrlKey) {
+                    //     img.setAttribute('src', '../asset/images/rect_icon05.png');
+                    // } else {
+                    //     img.setAttribute('src', '../asset/images/rect_icon06.png');
+                    // }
                     event.target.appendChild(img);
 
                 } 
             };
-            /*
+            
             list[i].onmouseleave = function() {
                 // event.target.bgColor = 'transparent';
                 event.currentTarget.removeChild(event.currentTarget.firstElementChild);
 
             };
-            */
+            
         }
 
     </script>

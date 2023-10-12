@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            transition: all 1s;
+        }
+        .div {
+            border: 1px solid #333 ;
+            color: #555;
+            border-bottom: white;
+            height: 500px;
+            margin-top: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            padding: 20px 10px;
+            margin: 0px auto;
+            width: 800px;
+            /* transition: all 1s; */
+        }
+
+        #div5 {
+            height: 800px;
+            border-bottom: #333;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="div1" class="div">
+        <h1>Index</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure nemo sequi iste asperiores, dicta, in voluptate omnis sunt maxime error deleniti, voluptatibus numquam ad iusto eveniet quis nulla facilis laboriosam ipsum nihil explicabo nisi et distinctio rem! Assumenda labore laborum facilis illo, numquam et fugit aliquid doloribus, debitis ab quaerat!</p>
+    </div>
+    <div id="div2" class="div">
+        <h1>About me</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure nemo sequi iste asperiores, dicta, in voluptate omnis sunt maxime error deleniti, voluptatibus numquam ad iusto eveniet quis nulla facilis laboriosam ipsum nihil explicabo nisi et distinctio rem! Assumenda labore laborum facilis illo, numquam et fugit aliquid doloribus, debitis ab quaerat!</p>
+    </div>
+    <div id="div3" class="div">
+        <h1>Career</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure nemo sequi iste asperiores, dicta, in voluptate omnis sunt maxime error deleniti, voluptatibus numquam ad iusto eveniet quis nulla facilis laboriosam ipsum nihil explicabo nisi et distinctio rem! Assumenda labore laborum facilis illo, numquam et fugit aliquid doloribus, debitis ab quaerat!</p>
+    </div>
+    <div id="div4" class="div">
+        <h1>Portfolio</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure nemo sequi iste asperiores, dicta, in voluptate omnis sunt maxime error deleniti, voluptatibus numquam ad iusto eveniet quis nulla facilis laboriosam ipsum nihil explicabo nisi et distinctio rem! Assumenda labore laborum facilis illo, numquam et fugit aliquid doloribus, debitis ab quaerat!</p>
+    </div>
+    <div id="div5" class="div">
+        <h1>Education</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure nemo sequi iste asperiores, dicta, in voluptate omnis sunt maxime error deleniti, voluptatibus numquam ad iusto eveniet quis nulla facilis laboriosam ipsum nihil explicabo nisi et distinctio rem! Assumenda labore laborum facilis illo, numquam et fugit aliquid doloribus, debitis ab quaerat!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure nemo sequi iste asperiores, dicta, in voluptate omnis sunt maxime error deleniti, voluptatibus numquam ad iusto eveniet quis nulla facilis laboriosam ipsum nihil explicabo nisi et distinctio rem! Assumenda labore laborum facilis illo, numquam et fugit aliquid doloribus, debitis ab quaerat!</p>
+    </div>
+
+    <script>
+
+        const div1 = document.getElementById('div1');
+        const div2 = document.getElementById('div2');
+        const div3 = document.getElementById('div3');
+        const div4 = document.getElementById('div4');
+        const div5 = document.getElementById('div5');
+
+        window.onscroll = function() {
+            // console.log(window.scrollY);
+            // console.log(window.scrollY, '+',div2.getBoundingClientRect().top);  //500
+            // console.log(window.scrollY, '+',div3.getBoundingClientRect().top);  //1000
+
+            if (window.scrollY >= 500 && window.scrollY <1000) {
+                document.body.style.backgroundColor = 'tomato';
+            } else if (window.scrollY >= 1000 && window.scrollY <1500) {
+                document.body.style.backgroundColor = 'gold';
+                
+            } else if (window.scrollY >= 1500 && window.scrollY <2000) {
+                document.body.style.backgroundColor = 'cornflowerblue';
+                
+            } else if (window.scrollY >= 2000 && window.scrollY <2500) {
+                document.body.style.backgroundColor = 'greenyellow';
+                
+            } else {
+                document.body.style.backgroundColor = 'white';
+
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
