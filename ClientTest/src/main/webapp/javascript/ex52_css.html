@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 150px; 
+            height: 150px; 
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #box1 {background-color: tomato;}
+        #box2 {background-color: orange;}
+        #box3 {background-color: gold;}
+        #box4 {background-color: yellowgreen;}
+        #box5 {background-color: cornflowerblue;}
+
+    </style>
+
+</head>
+<body>
+    <h1>클릭한 위치로 상자 이동하기</h1>
+    <!-- 에밋으로 생성 -->
+    <!-- div#box$.box{상자$}*5 -->
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+    <div id="box4" class="box">상자4</div>
+    <div id="box5" class="box">상자5</div>
+
+    <script>
+
+        const list = document.getElementsByClassName('box');
+        let index=0;    //상자 배열 위치
+        let zindex=1;
+
+        window.onmousedown = function() {
+
+            //상자의 position이 absolute이므로 문서 좌측 상단을 기준으로한다.
+            //clientX, clientY 가 문서 좌측 상단 기준으로 좌표를 반환한다.
+            // alert(event.clientX);
+
+            
+            //클릭시 상자가 이동한다. 상자 크기의 반을 빼주면서 클릭한 위치에 상자 가운데가 위치한다.(무게중심)
+            list[index].style.left = event.clientX - 75 + 'px';
+            list[index].style.top = event.clientY - 75 + 'px';
+            list[index].style.zIndex = zindex;
+            index++;
+            zindex++;
+
+            if (index >= list.length) index=0;
+
+        };
+
+    </script>
+
+</body>
+</html>

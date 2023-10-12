@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #menu {
+            display: flex;
+            width: 630px;
+            position: fixed;
+            top: 0; 
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: translate(0px, -100px);
+        }
+
+        #menu img {
+            transition: all .5s;
+        }
+        /* 
+        #menu img:hover {
+            transform: translate(0px, 90px);
+        } 
+        */
+
+    </style>
+
+</head>
+<body>
+
+    <nav id="menu">
+        <img src="../asset/images/rect_icon01.png">
+        <img src="../asset/images/rect_icon02.png">
+        <img src="../asset/images/rect_icon03.png">
+        <img src="../asset/images/rect_icon04.png">
+        <img src="../asset/images/rect_icon05.png">
+    </nav>
+    
+    <script>
+
+        const item = document.querySelectorAll('#menu > img');
+        let olditem = null;
+
+        for (let i=0; i<item.length; i++) {
+            item[i].onclick = function() {
+
+                //img가 하나 내려와있을 때 원위치로 되돌리기
+                if (olditem != null) {
+                    olditem.style.transform = 'translate(0px, 0px)';
+                }
+
+                //선택한 이미지와 기존 이미지가 다른 경우
+                if (event.target != olditem) {
+                    
+                    event.target.style.transform = 'translate(0px, 90px)';
+                    olditem = event.target;
+                    
+                    //선택한 이미지와 기존 이미지가 같은 경우, 기존 이미지를 원위치로 되돌린다.
+                } else {
+                    
+                    event.target.style.transform = 'translate(0px, 0px)';
+                    olditem = null;
+                    
+                }
+
+            };
+        }
+
+
+
+    </script>
+
+</body>
+</html>

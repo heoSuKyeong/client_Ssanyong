@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://pinnpublic.dothome.co.kr/question/javascript/transition4_impl.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="Author" content="in">
+	<meta name="Generator" content="Visual Studio Code">
+	<title>JavaScript</title>
+	<link rel="stylesheet" href="./JavaScript_files/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="./JavaScript_files/basic.css">
+	<style>
+		#main, .main {
+			position: static;
+		}
+		.cat { position: absolute; left:0px; top: 0px; display: none; }
+	</style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+
+
+	<img src="./JavaScript_files/catty01.png" class="cat" style="z-index: 21; left: 1146px; top: 10px; display: block;">
+	<img src="./JavaScript_files/catty02.png" class="cat" style="z-index: 20; left: 1146px; top: 11px; display: block;">
+	<img src="./JavaScript_files/catty03.png" class="cat" style="z-index: 19; left: 1146px; top: 12px; display: block;">
+	<img src="./JavaScript_files/catty04.png" class="cat" style="z-index: 18; left: 1147px; top: 13px; display: block;">
+	<img src="./JavaScript_files/catty05.png" class="cat" style="z-index: 17; left: 1147px; top: 14px; display: block;">
+	<img src="./JavaScript_files/catty06.png" class="cat" style="z-index: 16; left: 1147px; top: 16px; display: block;">
+	<img src="./JavaScript_files/catty07.png" class="cat" style="z-index: 15; left: 1147px; top: 17px; display: block;">
+	<img src="./JavaScript_files/catty08.png" class="cat" style="z-index: 14; left: 1147px; top: 18px; display: block;">
+	<img src="./JavaScript_files/catty09.png" class="cat" style="z-index: 13; left: 1147px; top: 19px; display: block;">
+	<img src="./JavaScript_files/catty10.png" class="cat" style="z-index: 12; left: 1147px; top: 20px; display: block;">
+	<img src="./JavaScript_files/catty11.png" class="cat" style="z-index: 11; left: 720px; top: 381px; display: block;">
+	<img src="./JavaScript_files/catty12.png" class="cat" style="z-index: 10; left: 722px; top: 381px; display: block;">
+	<img src="./JavaScript_files/catty13.png" class="cat" style="z-index: 9; left: 743px; top: 381px; display: block;">
+	<img src="./JavaScript_files/catty14.png" class="cat" style="z-index: 8; left: 753px; top: 381px; display: block;">
+	<img src="./JavaScript_files/catty15.png" class="cat" style="z-index: 7; left: 803px; top: 381px; display: block;">
+	<img src="./JavaScript_files/catty16.png" class="cat" style="z-index: 6; left: 858px; top: 381px; display: block;">
+	<img src="./JavaScript_files/catty17.png" class="cat" style="z-index: 5; left: 928px; top: 381px; display: block;">
+	<img src="./JavaScript_files/catty18.png" class="cat" style="z-index: 4; left: 1010px; top: 381px; display: block;">
+	<img src="./JavaScript_files/catty19.png" class="cat" style="z-index: 3; left: 1103px; top: 388px; display: block;">
+	<img src="./JavaScript_files/catty20.png" class="cat" style="z-index: 2; left: 1186px; top: 394px; display: block;">
+	<img src="./JavaScript_files/catty21.png" class="cat" style="z-index: 1; left: 1259px; top: 401px; display: block;">
+
+
+
+	<script>
+		var cats;
+		var pathX = [];
+		var pathY = [];
+
+		window.onload = function() {
+			cats = document.getElementsByClassName("cat");
+			for (var i=0; i<cats.length; i++) {
+				cats[i].style.zIndex = (cats.length-i);
+			}
+		};
+
+		window.onmousemove = function() {
+			pathX.push(event.clientX);
+			pathY.push(event.clientY);
+
+			if (pathX.length > cats.length) {
+				pathX.shift();
+				pathY.shift();
+			}
+
+			moveCat();
+		};
+
+		function moveCat() {
+
+			for (var i=0; i<cats.length; i++) {
+				if (pathX[i] != null) {
+					cats[i].style.left = pathX[i] - 64 + "px";
+					cats[i].style.top = pathY[i] - 64 + "px";
+					cats[i].style.display = "block";
+				}
+			}
+
+		}
+
+	</script>
+
+
+</body></html>

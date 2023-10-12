@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 150px; 
+            height: 150px; 
+            background-color: gold;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- <h1>박스 사이즈 조절하기</h1> -->
+    <div id="box1" class="box"></div>    
+
+
+    <script>
+
+        const box1 = document.getElementById('box1');
+        let isDown=false;
+
+        window.onmousedown = function() {
+            
+            // 빈 화면이 아닌 box를 선택했을 때 
+            if (event.target.id == 'box1' && isVaild(event)) {
+                isDown = true;
+                box1.style.opacity = .3;
+            }
+
+        };
+
+        function isVaild(event) {
+
+            //마우스가 상자의 우측 하단부를 눌렀는지 확인
+            //1. 현재 상자의 크기 확인
+            let w = parseInt(window.getComputedStyle(box1).width);
+            let h = parseInt(window.getComputedStyle(box1).height);
+
+            //2. 상자 width, height에서 10
+            if (event.offsetX >= (w-10) && event.offsetX <= w 
+                    && event.offsetY >= (h-10) && event.offsetY <= h) {
+                        return true;
+            }
+
+            return false;
+
+        }
+        
+        window.onmousemove = function() {
+            // console.log('move');
+
+            if (isDown){
+                // box1.style.width = event.clientX + 'px';
+                // box1.style.height = event.clientY + 'px';
+
+                // box1.style.width = event.clientX + 'px';
+                // box1.style.height = event.clientY + 'px';
+
+                box1.style.width = event.clientX + 'px';
+                box1.style.height = event.clientY + 'px';
+
+            }
+
+        };
+
+        window.onmouseup = function() {
+
+            isDown = false;
+            box1.style.opacity = 1;
+        };
+
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://pinnpublic.dothome.co.kr/question/javascript/transition5_impl.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="Author" content="in">
+	<meta name="Generator" content="Visual Studio Code">
+	<title>JavaScript</title>
+	<link rel="stylesheet" href="./JavaScript_files/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="./JavaScript_files/basic.css">
+	<style>
+		#main, .main {
+			position: static;
+		}
+		body { background-color: #444; }
+		#box { border: 10px solid black; width: 1000px; height: 700px; margin: 50px auto; overflow: hidden; position: relative; left: 0px; top: 0px; background-color: white; }
+		.cat { position: absolute; left:0px; top: 0px; display: none; }
+	</style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+	<div id="box">
+		<img src="./JavaScript_files/catty01.png" class="cat" style="z-index: 21; left: 344px; top: 349px; display: block;">
+		<img src="./JavaScript_files/catty02.png" class="cat" style="z-index: 20; left: 333px; top: 348px; display: block;">
+		<img src="./JavaScript_files/catty03.png" class="cat" style="z-index: 19; left: 328px; top: 348px; display: block;">
+		<img src="./JavaScript_files/catty04.png" class="cat" style="z-index: 18; left: 664px; top: 280px; display: block;">
+		<img src="./JavaScript_files/catty05.png" class="cat" style="z-index: 17; left: 687px; top: 235px; display: block;">
+		<img src="./JavaScript_files/catty06.png" class="cat" style="z-index: 16; left: 725px; top: 169px; display: block;">
+		<img src="./JavaScript_files/catty07.png" class="cat" style="z-index: 15; left: 773px; top: 96px; display: block;">
+		<img src="./JavaScript_files/catty08.png" class="cat" style="z-index: 14; left: 821px; top: 30px; display: block;">
+		<img src="./JavaScript_files/catty09.png" class="cat" style="z-index: 13; left: 865px; top: -28px; display: block;">
+		<img src="./JavaScript_files/catty10.png" class="cat" style="z-index: 12; left: 901px; top: -78px; display: block;">
+		<img src="./JavaScript_files/catty11.png" class="cat" style="z-index: 11; left: 915px; top: -93px; display: block;">
+		<img src="./JavaScript_files/catty12.png" class="cat" style="z-index: 10; left: 1048px; top: -112px; display: block;">
+		<img src="./JavaScript_files/catty13.png" class="cat" style="z-index: 9; left: 1051px; top: -101px; display: block;">
+		<img src="./JavaScript_files/catty14.png" class="cat" style="z-index: 8; left: 589px; top: 682px; display: block;">
+		<img src="./JavaScript_files/catty15.png" class="cat" style="z-index: 7; left: 607px; top: 650px; display: block;">
+		<img src="./JavaScript_files/catty16.png" class="cat" style="z-index: 6; left: 657px; top: 567px; display: block;">
+		<img src="./JavaScript_files/catty17.png" class="cat" style="z-index: 5; left: 724px; top: 472px; display: block;">
+		<img src="./JavaScript_files/catty18.png" class="cat" style="z-index: 4; left: 807px; top: 371px; display: block;">
+		<img src="./JavaScript_files/catty19.png" class="cat" style="z-index: 3; left: 894px; top: 271px; display: block;">
+		<img src="./JavaScript_files/catty20.png" class="cat" style="z-index: 2; left: 970px; top: 182px; display: block;">
+		<img src="./JavaScript_files/catty21.png" class="cat" style="z-index: 1; left: 1033px; top: 103px; display: block;">
+	</div>
+
+	<script>
+		var cats;
+		var isDown = false;
+		var pathX = [];
+		var pathY = [];
+		var box;
+
+		window.onload = function() {
+			box = document.getElementById("box");
+			cats = document.getElementsByClassName("cat");
+			for (var i=0; i<cats.length; i++) {
+				cats[i].style.zIndex = (cats.length-i);
+			}
+		};
+
+		window.onmousedown = function() {
+			isDown = true;
+		};
+		window.onmouseup = function() {
+			isDown = false;
+		};
+		window.onmousemove = function() {
+			pathX.push(event.clientX);
+			pathY.push(event.clientY);
+
+			if (pathX.length > cats.length) {
+				pathX.shift();
+				pathY.shift();
+			}
+
+			moveCat();
+		};
+
+		function moveCat() {
+			for (var i=0; i<cats.length; i++) {
+				if (pathX[i] != null) {
+					cats[i].style.left = pathX[i] - 64 - box.offsetLeft + "px";
+					cats[i].style.top = pathY[i] - 64 - box.offsetTop + "px";
+					cats[i].style.display = "block";
+				}
+			}
+
+		}
+
+	</script>
+
+
+</body></html>

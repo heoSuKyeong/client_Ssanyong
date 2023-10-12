@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/1f653a59f2.js" crossorigin="anonymous"></script>
+
+    <style>
+        #box1 {
+            border: 1px solid black;
+            width: 200px;   
+            height: 200px;
+        }
+        .one {font-size: 3rem;}
+        .two {color: cornflowerblue;}
+        .three {text-decoration: underline;}
+
+        body {margin-bottom: 100px;}
+
+    </style>
+
+</head>
+<body>
+
+    <h1>CSS</h1>  
+    <input type="button" value="버튼" id="btn1">  
+    <hr>
+    <div id="box1">상자</div>
+    <div id="box1" style="width: 200px;">상자</div>
+    <!-- <div id="box1" style="color: blue">상자</div> -->
+
+    <hr>
+
+    <h1>텍스트</h1> 
+    <div class="tool">
+        <button type="button" id="btn2"<i class="fa-solid fa-magnifying-glass-minus"></i></button>
+        <button type="button" id="btn3"<i class="fa-solid fa-magnifying-glass-plus"></i></button>
+    </div>
+
+    <p id="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel hic expedita, temporibus aspernatur voluptatem deleniti recusandae quasi iure enim, nisi eaque cupiditate laboriosam provident voluptas, culpa veniam quos corporis ullam sunt? Quasi sequi itaque veritatis aspernatur fuga soluta, pariatur repudiandae et, eum ratione voluptatibus alias dolore expedita aliquam recusandae ducimus. Nam earum, recusandae unde veritatis nostrum iure explicabo quisquam voluptatem, vero nemo error cum officia eligendi accusamus numquam provident inventore consectetur aut distinctio ullam. Sequi, at amet eveniet unde ab voluptates? Distinctio vitae quaerat labore ab minus quas nam neque exercitationem eligendi voluptatem alias, necessitatibus tenetur quos non accusamus enim eius hic voluptas accusantium quae libero quasi vel. Commodi voluptas amet eum vero magni accusamus impedit ex incidunt consectetur tempora optio harum hic et animi maiores minus, repudiandae assumenda illo voluptatum maxime quas, officiis, sequi placeat? Saepe nobis quod natus illo quos voluptatem vero quas aperiam voluptates. Officia adipisci deleniti asperiores dolorum nulla earum obcaecati facilis aliquid voluptatem est, porro accusantium hic sed deserunt suscipit, dolores quibusdam eos aperiam laborum ducimus. Expedita nisi nihil laboriosam ducimus cupiditate voluptatibus eveniet ipsum iure? Reiciendis incidunt vel, ullam a ducimus autem ut veniam eligendi, quisquam minima assumenda perferendis fugit harum asperiores provident dolorum. Nemo sit error quod in ea, suscipit expedita fugit magni reiciendis magnam nulla asperiores, sapiente quos dignissimos molestiae vitae id! Explicabo necessitatibus officiis nostrum. Iste et sunt laborum optio harum nisi aliquam veritatis atque omnis deleniti amet, quos, illum suscipit! Itaque excepturi harum temporibus, voluptatum officia omnis consequatur error aspernatur quos culpa perferendis, impedit corrupti explicabo et ullam placeat molestias eius nemo ut cum veniam facilis accusamus odio consequuntur! Incidunt expedita architecto harum beatae sed earum nesciunt dolor saepe cupiditate minima totam deleniti sit non doloribus, impedit ratione accusamus? Molestiae rerum unde omnis eos quia recusandae sit iste dolorem in?</p>
+    
+    <script>
+        const btn1 = document.getElementById('btn1');
+        const box1 = document.getElementById('box1');
+        /*
+        btn1.addEventListener('click', function() {
+            // box1.style = 'color: blue';  //BOM
+            // box1.setAttribute('style', 'color: gold');  //DOM
+
+            // box1.style = 'color: blue; font-size: 2rem';
+
+            // box1.style = 'color: blue';
+            
+            box1.style.color = 'blue';
+            box1.style.fontSize = '2rem';
+            box1.style.backgroundColor = 'gold';
+            
+
+            box1.style['color'] = 'blue';
+            box1.style['font-size'] = '2rem';
+            box1.style['background-image'] = 'url(../asset/images/catty01.png)';
+        });
+        */
+    </script>
+    <script>
+
+        //alert(box1.style.width);    //크기가 있는데 null을 반환한다.
+        //css가 아닌 style이라는 속성의 값이 존재하지 않는다.
+        //인라인, 외부css 를 읽지못한다.
+
+        // box1.style.width = '300px';
+
+
+    </script>
+
+    <script>
+
+        //버튼 클릭하면 상자의 너비를 현재 너비 + 50px 씩 증가되게
+        //인라인시트 css에 width 먼저 기재해준다.
+        // box1.style.width = box1.style.width + 50;   //box1.style.width = '200px'+50
+        box1.style.width = parseInt(box1.style.width) + 50 + 'px';
+
+    </script>
+
+    <script>
+        const list = window.getComputedStyle(box1);
+        // alert(list.width);
+        // alert(list.getPropertyValue('width'));
+    </script>
+
+    <script>
+
+        //버튼으로 폰트크기 조절하기
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+        const content = document.getElementById('content');
+        
+        //기본 폰트 크기는 16px
+
+        //폰트 크기 통제를 하기 위한 변수 생성
+        let size = 16;
+
+
+        btn2.addEventListener('click', function() {
+            // size--;
+            // content.style.fontSize = size + 'px';
+
+            //<p class="one">
+            content.className = 'one two';
+            content.classList.add('three');
+        });
+
+        btn3.addEventListener('click', function() {
+            // size++;
+            // content.style.fontSize = size + 'px';
+            /*
+            //<p class="two">
+            content.className = 'two';
+            content.className += ' three';  //띄어쓰기 주의
+            */
+            content.classList.add('one');
+            content.classList.add('three');
+            content.classList.remove('three');
+        });
+
+    </script>
+
+</body>
+</html>

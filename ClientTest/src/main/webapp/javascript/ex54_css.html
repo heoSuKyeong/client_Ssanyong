@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 150px; 
+            height: 150px; 
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: gold;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="box1" class="box"></div>    
+    <p>drag&drop을 구현합니다.</p>
+
+    <script>
+
+        const box1 = document.getElementById('box1');
+        let isDown;
+        //클릭한 상자 내의 위치
+        let x=0;    
+        let y=0;
+
+        window.onmousedown = function() {
+            
+            //빈 화면에서 드래그를 했을 때, 상자가 따라오는 것을 방지
+            //누른 대상이 빈 화면인지, 상자인지 확인한다.
+            if (event.target.id == 'box1') {
+                isDown = true;
+            }
+
+            //상자의 어느 부분을 눌렀는지
+            x = event.offsetX;
+            y = event.offsetY;
+
+        };
+        
+        //이벤트를 움직이는 대상에게 걸면 마우스 포인터가 대상 밖으로 나가면 작동하지 않는다.    
+        window.onmousemove = function() {
+            
+            if (isDown) {
+                //무게중신
+                box1.style.left = event.clientX - x + 'px';
+                box1.style.top = event.clientY - y + 'px';
+
+            }
+        };
+
+        window.onmouseup = function() {
+
+            isDown = false;
+
+        };
+
+
+    </script>
+
+    
+</body>
+</html>

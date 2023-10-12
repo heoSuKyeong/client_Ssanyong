@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 이동 */
+        .draggable {
+            position: relative;
+            left: 0;    
+            top: 0;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: gold;
+            border: 1px solid black;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+    <h1 class="draggable">상자 여러개 Drag&Drop</h1>
+
+    <div id="box1" class="box draggable">상자1</div>
+    <div id="box2" class="box draggable">상자2</div>
+    <div id="box3" class="box draggable">상자3</div>
+
+    <img src="../asset/images/catty01.png" class="draggable">
+
+    <script>
+        //생성한 객체에 draggable 클래스만 추가하면 해당 이벤트가 적용된다.
+
+        //어떤 상자를 누르지 모르기에 상자를 미리 찾지않고 객체를 생성한다.
+        let obj;
+        let isDown = false;
+        let x =0;
+        let y =0;
+
+        let nx = 0;
+        let ny = 0;
+
+        window.onmousedown = function() {
+
+            // 해당 객체에 draggable 클래스가 있는지 검사
+            if (event.target.classList.contains('draggable')) {
+                isDown = true;
+                x = event.offsetX;
+                y = event.offsetY;
+                obj = event.target;
+
+                nx = event.target.getBoundingClientRect().x - parseInt(event.target.style.left != ''? event.target.style.left : 0);
+                ny = event.target.getBoundingClientRect().y - parseInt(event.target.style.top != ''? event.target.style.top : 0);
+            }
+
+        };
+
+        window.onmousemove = function() {
+
+            if (isDown) {
+                //선택한 객체를 이동한다.
+                obj.style.left = event.clientX - x - nx + 'px';
+                obj.style.top = event.clientY - y - ny + 'px';
+
+                //고스트 이미지 현상 제거
+                event.stopPropagation();
+                return false;
+
+            }
+
+        };
+
+        window.onmouseup = function() {
+            isDown = false;
+        };
+
+
+    </script>
+
+
+
+</body>
+</html>
