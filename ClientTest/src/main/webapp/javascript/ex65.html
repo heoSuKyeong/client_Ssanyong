@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수, Arrow Function</title>
+</head>
+<body> 
+
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+
+    <script>
+
+        //함수 선언문
+        function f1() {
+            console.log('f1');
+
+        }
+        f1();
+
+        //함수 표현식 (리터럴) == 익명함수
+        //익명이므로 그냥 호출할 수가 없어 변수에 저장하여 호출
+        const f2 = function () {
+            console.log('f2');
+        }
+        f2();
+
+        // 즉시 호출 : 전체를 묶고 호출한다.
+        (function() {
+            console.log('f2_1');
+        })(); 
+
+        //화살표 함수 == 익명 함수
+        const f3 = () => {
+            console.log('f3');
+        };
+        f3();
+
+
+    </script>
+
+    <script>
+
+        //람다의 특징
+        //실행문이 1줄일 때, 실행 블럭을 생략할 수 있다.
+        const f4 = () => console.log('f4');
+        f4();
+
+        //매개변수가 1개일 때, 소괄호를 생략할 수 있다.
+        const f5 = (num) => console.log(num);
+        const f6 = num => console.log(num);
+
+        //반환값이 1개일 때, 중괄호와 return을 생략할 수 있다.
+        const f8 = () => {return 100;};
+        const f9 = () => 100;
+
+
+        
+    </script>
+
+    <script>
+
+        const obj = {
+            onclick: function() {
+                // 이곳 에서 this는 obj를 의미
+            }
+        }
+
+        obj.onclick = function() {};
+
+
+
+
+        document.getElementById('btn1').onclick = function() {
+            // alert('btn1');
+            //이벤트 발생 객체의 정보 확인 > 'btn1'
+            //상대 표현
+            // alert(event.target.value);   //버튼1
+            // alert(event.srcElement.value);  //버튼1
+            // alert(event.currentTarget.value);   //버튼1
+
+            alert(this.value);  //버튼 1
+            //단, 콜백함수에서 this는 위험할 수 있다.
+        
+            //절대 표현 > 비추천
+            // alert(document.getElementById('btn1').value);    //버튼1
+        }
+        
+        document.getElementById('btn2').onclick = () => {
+            // alert('btn2');
+            //이벤트 발생 객체의 정보 확인 > 'btn2'
+            //상대 표현
+            // alert(event.target.value);   //버튼1
+            // alert(event.srcElement.value);  //버튼1
+            // alert(event.currentTarget.value);   //버튼1
+
+            //아래 코드의 this는 window객체이다
+            alert(this.value);  // undefined
+            //화살표 함수는 어떤 식으로 호출되든 그 안에서의 this는 항상 window객체를 의미한다.
+            //화살표 함수 내에서 this는 잘 사용하지 않는다.
+        }
+
+        console.clear();
+    </script>
+    
+    <script>
+
+        const arr = [1,2,3,4,5,6,7,8,9,10];
+        const farr = ['사과', '포도', '딸기', '바나나', '귤', '앵두', '자두', '배', '참외','수박', '복숭아'];
+
+        //loop
+        for (let i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        }
+
+        //프로퍼티 탐색
+        //인덱스가 프로퍼티를 의미하기에 , 인덱스처럼 사용가능하다
+        for (let p in farr) {
+            console.log(p, arr[p]);
+        }
+
+        //forEach() == 향상된 for문
+        arr.forEach(function (num) {
+            console.log(num);
+        });
+
+        //화살표 함수 적용
+        arr.forEach(num=> console.log(num));
+        farr.forEach(f => console.log(f));
+
+        //방번호를 반환한다.
+        farr.forEach((f, index) => console.log(f, index));
+
+        //원본 배열을 반환한다.
+        //잘 사용하지 않는다
+        farr.forEach((f, index, arr) => console.log(f, index, arr));
+
+        console.clear;
+    </script>
+
+    <script>
+        //map
+        //요소를 다른 값으로 변환한 후 새로운 배열을 반환한다.
+        //가공 및 변환할 때 사용한다.
+        // console.log(arr.map(n => n % 2 == 0 ? '짝수':'홀수'));
+        // console.log(farr.map(item => item.length));
+
+        // farr.map(item => item.length).forEach(length => console.log(length));
+
+        // 20세 + 서울시 > object[]
+        const names = ['홍길동', '아무개', '하하하'];
+        const oarr1 = [];
+        /*
+        const o1 = {
+            name: '홍길동',
+            age: 20,
+            address: '서울시'
+        }
+        */
+
+        for (let i=0; i<names.length; i++){
+            const o1 = {
+                name: names[i],
+                age: 20,
+                address: '서울시'
+            };
+            oarr1[i]=o1;
+        }
+        
+        console.log(oarr1);
+
+        //스트림 활용
+        const oarr2 = names.map(name => {
+            return {
+                name: name,
+                age: 20,
+                address: '서울시'
+            };
+        });
+
+        console.log(oarr2);
+
+    </script>
+
+    <script>
+
+        //filter()
+        console.log(arr.filter(num=> num%2==0));
+
+        console.log(farr.filter(item => item.length >= 3));
+
+    </script>
+
+    <script>
+
+        //find()
+        console.log(farr.find(item => item.length >=3));    //바나나
+
+    </script>
+
+</body>
+</html>

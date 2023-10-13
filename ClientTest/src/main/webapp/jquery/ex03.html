@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03.html</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+<body>
+    <h1>jQuery Event</h1>
+
+    <input type="button" value="버튼" id="btn1" class="btn"> 
+    <input type="button" value="버튼" id="btn2" class="btn"> 
+    <input type="button" value="버튼" id="btn3" class="btn"> 
+
+    <script src="../asset/js/jquery-1.12.4.js"></script>
+
+    <script>
+
+        //1. BOM
+        // <input onclick="">
+        // btn.onclick = function() {}
+
+        //2. DOM
+        // btn.addEventListener('click', function() {});
+
+        //3. jQuery
+        //제이쿼리는 변수형태의 프로퍼티가 없다.
+        // obj.length   //x
+        // obj.substr()
+
+        // jQuery('#btn1').css('color','blue');
+
+        //jQuery 별칭 : $
+        // $('#btn2').css('color', 'orange');
+
+        //jQuery 이벤트 함수
+        //1. 전용 이벤트 함수
+        //2. 범용 이벤트 함수 : 다양한 이벤트를 
+        /*
+        $('#btn1').click(function() {
+            alert('btn1');
+        });
+
+        //범용 함수
+        $('#btn2').on('click', function() {
+            alert('btn2');
+        });
+
+        $('#btn3').click(function() {
+            //이벤트 주체 확인
+            // alert(event.target.id);     //btn3
+            // alert(this.id);     //btn3
+
+            //이벤트 제거
+            $('#btn2').off('click');
+        })
+        */
+        /*
+        //어느 영역에서든 익명 함수에서 this는 window이다.
+        $('#btn3').click(() => {
+            alert(this.id);     //undefined
+        })
+        */
+
+        //버튼 3개에 이벤트 추가
+        /*
+        const list = document.querySelectorAll('.btn');
+
+        for (let i=0; i<list.length; i++){
+            list[i].onclick = function() {
+                alert(event.target.value);
+            }
+        }
+        */
+       //제이쿼리로 찾은 반환값에 클릭이벤트를 적용하면 자동으로 btn클래스에 속한 객체에 click 이벤트를 적용하는 루프를 돈다.
+       //반복문 작성이 생략되어 작업 속도가 빨라진다.
+        $('.btn').click(function() {
+            alert(event.target.value);
+        })
+
+    </script>
+
+</body>
+</html>

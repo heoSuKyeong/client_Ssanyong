@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="txt1">
+
+    <script src="../asset/js/jquery-1.12.4.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script>
+        //텍스트박스
+        //1. BOM
+        document.all.txt1.value = 'BOM';
+        
+        //2 DOM 
+        //getXXX메소드, DOM 트리(Axis), querySelectorXXX
+        document.getElementById('txt1').value = 'DOM';
+
+        //3. jQrery
+        //jQerry() 함수
+        //DOM의 'document.querySelectorAll()' 과 같다
+        jQuery('#txt1').val('jQuery');
+
+    </script>
+
+
+</body>
+</html>
