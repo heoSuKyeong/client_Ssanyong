@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            position: absolute;
+            left: 0;
+            top: 50px;
+        }
+    </style>
+
+</head>
+
+<body ondragstart='return false' onselectstart='return false'>
+    <input type="button" value="시작" id="btn1">
+    <img src="../asset/images/catty12.png" id="img1">
+
+    <script>
+
+        const img1 = document.getElementById('img1');
+        const btn1 = document.getElementById('btn1');
+
+        // let warr = new Array();
+        // let harr = new Array();
+        let cxarr = new Array();
+        let cyarr = new Array();
+
+        let timer = 0;
+
+        window.onload = function() {
+            btn1.onclick = function () {
+                // if (timer==0) {
+                timer = setInterval(function () {
+                    // for (let i = 0; i < cxarr.length; i++) {
+    
+                    // console.log(cxarr.length);
+                    // img1.style.left = cxarr[i] - 50 + 'px';
+                    // img1.style.top = cyarr[i] - 50 + 'px';
+                    img1.style.left = cxarr[0] - 64 + 'px';
+                    img1.style.top = cyarr[0] - 64 + 'px';
+    
+                    cxarr.shift();
+                    cyarr.shift();
+    
+                    if (cxarr.length ==0) {
+                        clearInterval(timer);
+                    }
+                    // }
+    
+                }, 21);
+                // img1.style.left = cxarr.pop- (warr.pop/2) -50 + 'px';
+                // img1.style.top = cyarr.pop - (harr.pop/2) -50 + 'px';
+                // }
+    
+            };
+
+        };
+
+
+        window.onmousemove = function () {
+
+            if (event.ctrlKey) {
+                // warr.push(parseInt(window.getComputedStyle(img1).width));
+                // harr.push(parseInt(window.getComputedStyle(img1).height));
+
+                cxarr.push(event.clientX);
+                cyarr.push(event.clientY);
+            }
+
+        };
+
+
+    </script>
+
+</body>
+
+</html>

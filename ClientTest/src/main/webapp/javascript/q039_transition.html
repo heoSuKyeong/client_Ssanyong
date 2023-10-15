@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 1s linear;
+        }
+    </style>
+
+</head>
+<body>
+
+    <img src="../asset/images/catty01.png" id="img1">
+
+    <script>
+
+        const img1 = document.getElementById('img1');
+
+        let x=0;
+        let y=0;
+
+        window.onmousedown = function() {
+            // console.log(window.getComputedStyle(img1).width);
+            let w = parseInt(window.getComputedStyle(img1).width);
+            let h = parseInt(window.getComputedStyle(img1).height);
+
+            img1.style.left = event.clientX - (w/2) + 'px';
+            img1.style.top = event.clientY - (h/2) + 'px';
+        };
+
+
+    </script>
+    
+</body>
+</html>

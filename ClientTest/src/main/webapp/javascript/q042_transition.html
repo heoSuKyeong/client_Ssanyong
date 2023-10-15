@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+           background-color: #444; 
+        }
+        .cat {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        #box {
+            border: 10px solid black;
+            width: 1000px;
+            height: 700px;
+            margin: 50px auto;
+            overflow: hidden;
+            position: relative;
+            left: 0;    
+            top: 0;
+            background-color: white; 
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 이동하는 마우스를 따라 고양이를 이동시키시오. -->
+
+    <div id="box">
+
+        <img src='../asset/images/catty01.png' class='cat'>
+        <img src='../asset/images/catty02.png' class='cat'>
+        <img src='../asset/images/catty03.png' class='cat'>
+        <img src='../asset/images/catty04.png' class='cat'>
+        <img src='../asset/images/catty05.png' class='cat'>
+        <img src='../asset/images/catty06.png' class='cat'>
+        <img src='../asset/images/catty07.png' class='cat'>
+        <img src='../asset/images/catty08.png' class='cat'>
+        <img src='../asset/images/catty09.png' class='cat'>
+        <img src='../asset/images/catty10.png' class='cat'>
+        <img src='../asset/images/catty11.png' class='cat'>
+        <img src='../asset/images/catty12.png' class='cat'>
+        <img src='../asset/images/catty13.png' class='cat'>
+        <img src='../asset/images/catty14.png' class='cat'>
+        <img src='../asset/images/catty15.png' class='cat'>
+        <img src='../asset/images/catty16.png' class='cat'>
+        <img src='../asset/images/catty17.png' class='cat'>
+        <img src='../asset/images/catty18.png' class='cat'>
+        <img src='../asset/images/catty19.png' class='cat'>
+        <img src='../asset/images/catty20.png' class='cat'>
+        <img src='../asset/images/catty21.png' class='cat'>
+    </div>
+
+
+    <script>
+
+        let pathX = new Array();
+        let pathY = new Array();
+        let cats = document.getElementsByClassName('cat');
+        let box = document.getElementById('box');
+        let zindex = cats.length;
+
+        window.onload = function() {
+            // cats = document.getElementsByClassName('cat');
+            for (let i=0; i<cats.length; i++) {
+                cats[i].style.zIndex = zindex--;
+                
+            }
+        };
+        window.onmousemove = function() {
+
+            pathX.push(event.clientX);
+            pathY.push(event.clientY);
+
+            if (pathX.length > cats.length) {
+                pathX.shift();
+                pathY.shift();
+            }
+
+            for (let i=0; i<cats.length; i++){
+                cats[i].style.left = pathX[i] - 64 - box.offsetLeft + "px";
+                cats[i].style.top = pathY[i] - 64 - box.offsetTop + "px";
+                cats[i].style.display = "block";
+            }
+
+        };
+
+    </script>
+
+</body>
+
+</html>
