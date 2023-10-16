@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: #F7F7F7;
+        }
+        #div1 {
+            margin : 30px auto;
+        }
+
+        #bird {
+            width: 200px;
+            height: 130px;
+            background-image: url(../asset/images/fly.png);
+            background-repeat: no-repeat;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 새를 날게 하시오. -->
+    <div id="div1">
+
+        <h1>새 날개짓</h1>
+        <div id="bird"></div>
+        새의 속도 : <select id="sel1">
+            <option value="1">low</option>
+            <option value="2">nomal</option>
+            <option value="3">high</option>
+            <option value="4">vhigh</option>
+        </select>   
+    </div>
+
+
+    <script>
+
+        let x=0;
+        let timer=0;
+
+        window.onload = function() {
+
+            timer = setInterval(function() {
+                x -= 200;
+    
+                if (x<-800) {
+                    x=0;
+                }
+                document.getElementById('bird').style.backgroundPosition = x + 'px 0px';
+
+            }, 100);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

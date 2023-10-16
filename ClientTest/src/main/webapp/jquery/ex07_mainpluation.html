@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex07_mainpluation</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+<body>
+    <h1>jQuery 태그 조작</h1>
+    
+    <input type="button" value="버튼" id="btn1">
+    <hr>
+    <div id="box"></div>
+    <hr>
+    <input type="text" id="txt1">
+
+    <script src="../asset/js/jquery-1.12.4.js"></script>
+
+    <script>
+
+        $('#btn1').click(function() {
+
+            //콘텐츠 조작 방법
+            //inertText, textContext > text()
+            //innerHTML     > html()
+            //value : textbox에 한해 가능하다
+
+            // 쓰기 메서드에 매개변수값을 넣지않으면 읽기가 된다.
+
+            // $('#txt1').text('홍길동');
+            // $('#box').text('홍길동');       //쓰기
+            // console.log($('#box').text())   //읽기
+
+            // $('#box').html('<b>안녕하세요</b>');
+
+            // $('#txt1').val('기본값');
+            // console.log($('#box').val());
+
+
+            //HTML 속성 조작(입출력)
+            //BOM
+            // obj.prop : 읽기
+            // obj.prop = value     :쓰기
+
+            //DOM
+            // obj.getAttribute('prop')     :읽기
+            // obj.setAttribute('prop', value)      :쓰기
+            
+            // attr, prop 
+            // 외워서 사용하지않고 자유롭게 한 쪽을 사용하다가 통제가 되지않으면 다른 것으로 바꿔서 사용한다.
+
+            //attr : HTML의 속성을 제어한다.
+            //명시적으로 표기가 안되어있으면 읽을 수 없다.
+            // $('#txt1').attr('size', 50);
+            // alert($('#txt1').attr('size'));  //undefined
+            
+            //prop : JavaScript의 프로퍼티를 제어한다.
+            //자바스크립트의 속성이 있든없든
+            // $('#txt1').prop('size',  50);
+            // 위 코드 없이 단독실행했을 때 텍스트박스의 크기가 출력된다.
+            // alert($('#txt1').prop('size'));  //20
+            /*
+            $('#txt1').attr('size', 10)
+                      .attr('title', '입력하세요').attr('maxlength', 5);
+
+            $('#txt1'),attr({
+                size: 10,
+                title: '입력하세요',
+                maxlength: 5
+            });
+            */
+            //태그 추가
+            // box.innerHTML= '<img>';
+            // $('#box').html('<img src="../asset/image/catty01.png">');
+            
+            // box.innerHTML += '<img>';
+            // $('#box').html($('#box').html()+'<img src="../asset/images/catty01.png">');
+
+            //누적 + 추가
+            // $('#box').append();     : 뒤에 추가
+            // $('#box').prepend();    : 앞에 추가
+
+            // append('태그')
+            // prepend('태그')
+            // append(객체)
+            // prepend(객체)
+
+            // $('#box').append(`<img src="../asset/images/catty0${n}.png">`);
+            // $('#box').prepend(`<img src="../asset/images/catty0${n}.png">`);
+            // n++;
+
+            //추가한 이미지에 테두리 적용하기
+            //번거로운 느낌이 있다.
+            // $('#box').append(`<img src="../asset/images/catty0${n}.png">`);
+            // $('#box img:last-child').css('border', '1px solid black');
+            
+            //제이쿼리의 세번째 용도?
+            //1. CSS 선택자로 태그 검색
+            //2. 자바스크립트 객체로 형변환
+            //3. HTML 태그 문자열을 태그로 생성.
+
+            // $(`<img src="../asset/images/catty0${n}.png">`).css('border', '1px solid, black');  //아직은 메모리에만 존재
+            // $('#box').append($(`<img src="../asset/images/catty0${n}.png">`).css('border', '1px solid black')); //box에 추가
+
+            //append(): 부모가 자식을 추가
+            //appendTo() : 자식이 부모한테 추가
+            //prepend()
+            //prependT()
+
+            // $('#box').append('<input>');
+            // $('<input>').appendTo('#box');   // 중심객체가 input 태그로 인식된다
+
+            // 위 코드로는 느낌을 잘 알 수가 없다.
+
+            //부모에 추가 후 속성 수정
+            $('#box').append($('<input')
+                            .attr('size', 10)
+                            .css('color', 'blue'));
+            
+            //객체 수정 후 부모에 추가 > 훨씬 가독성이 좋아보임
+            $('<input>').attr('size', 10)
+                        .css('color', 'blue')
+                        .appendTo($('#box'));
+
+            //부모.removeChild(자식)  
+
+            //(부모 없이)본인 스스로 삭제 
+            $('input').remove()
+
+
+        });
+
+        let n=1;
+
+
+    </script>
+
+</body>
+</html>
